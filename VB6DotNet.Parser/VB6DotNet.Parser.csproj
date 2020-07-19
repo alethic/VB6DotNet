@@ -1,0 +1,22 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+        <RootNamespace>VB6DotNet</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Antlr4.Runtime.Standard" Version="4.8.0" />
+        <PackageReference Include="Antlr4BuildTasks" Version="8.0" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Antlr4 Include="ANTLR\VisualBasic6.g4">
+            <Package>VB6DotNet.ANTLR</Package>
+        </Antlr4>
+    </ItemGroup>
+
+    <PropertyGroup>
+        <NoWarn>3021;1701;1702</NoWarn>
+    </PropertyGroup>
+</Project>
