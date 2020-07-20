@@ -1,5 +1,10 @@
 ﻿using System;
+using System.Buffers.Binary;
 using System.Reflection.PortableExecutable;
+using System.Text;
+
+using VB6DotNet.Metadata.Extensions;
+using VB6DotNet.Metadata.PortableExecutable;
 
 namespace VB6DotNet.Metadata
 {
@@ -63,10 +68,57 @@ namespace VB6DotNet.Metadata
             return (int)(of - pe.PEHeaders.PEHeader.ImageBase);
         }
 
+        /// <summary>
+        /// Gets the offset within the PE of the VB project info structure for a library.
+        /// </summary>
+        /// <param name="mb"></param>
+        /// <returns></returns>
         int GetExeProjectInfoAddressOffsetForLibrary(PEMemoryBlock mb)
         {
-            var sec = pe.GetSectionData(".edata");
-            throw new NotImplementedException();
+            var ed = pe.ReadExportTableDirectory();
+            if (ed.Count == 0)
+                throw new BadImageFormatException("Could not locate export table directory. Executable might not be a VB6 library.");
+
+            var et = ed[0];
+            foreach (var funcName in new[] { "DllCanUnloadNow", "DllRegisterServer", "DllUnregisterServer", "DllGetClassObject" })
+            {
+                // find named export
+                var o = -1;
+                for (var i = 0; i < et.Names.Count; i++)
+                {
+                    if (et.Names[i] != funcName)
+                        continue;
+
+                    // found index
+                    o = i;
+                    break;
+                }
+
+                // did not find export
+                if (o < 0)
+                    break;
+
+                // must be a symbol
+                var e = et.Exports[et.Ordinals[o]];
+                if (e.Type != ExportType.Symbol)
+                    break;
+
+                // search first bit of function for push instruction and take data
+                var c = pe.ToSpan(e.Symbol, 8);
+                for (var i = 0; i < 8; i++)
+                {
+                    if (c[i] != 0x68)
+                        continue;
+
+                    // arg should be pointer to header with magic value
+                    var h = BinaryPrimitives.ReadInt32LittleEndian(c[(i + 1)..(i + 5)]) - (int)pe.PEHeaders.PEHeader.ImageBase;
+                    var s = Encoding.ASCII.GetString(pe.ToSpan(h, 4));
+                    if (s == "VB5!")
+                        return h;
+                }
+            }
+
+            throw new BadImageFormatException("Could not locate export table directory. Executable might not be a VB6 library.");
         }
 
     }

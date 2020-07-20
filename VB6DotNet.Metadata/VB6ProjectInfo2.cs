@@ -13,9 +13,10 @@ namespace VB6DotNet.Metadata
     public readonly ref struct VB6ProjectInfo2
     {
 
+        internal const int Size = 40;
+
         readonly int offset;
         readonly PEReader pe;
-        readonly ReadOnlySpan<byte> memory;
 
         /// <summary>
         /// Initializes a new instance.
@@ -26,58 +27,64 @@ namespace VB6DotNet.Metadata
         {
             this.pe = pe ?? throw new ArgumentNullException(nameof(pe));
             this.offset = offset;
-            this.memory = pe.ToSpan().Slice(offset, 40);
         }
 
+        ReadOnlySpan<byte> Span => pe.ToSpan(offset, Size);
+
         /// <summary>
-        /// Heap link.
+        /// Gets the pointer to the heap link.
         /// </summary>
-        public uint HeapLinkPtr => BinaryPrimitives.ReadUInt32LittleEndian(memory[0x0..0x4]);
+        uint HeapLinkPtr => BinaryPrimitives.ReadUInt32LittleEndian(Span[0x0..0x4]);
+
+        /// <summary>
+        /// Gets the pointer to the object table.
+        /// </summary>
+        int ObjectTablePtr => BinaryPrimitives.ReadInt32LittleEndian(Span[0x4..0x8]);
 
         /// <summary>
         /// Gets the object table.
         /// </summary>
-        public VB6ObjectTable ObjectTable => new VB6ObjectTable(pe, (int)(BinaryPrimitives.ReadUInt32LittleEndian(memory[0x4..0x8]) - (uint)pe.PEHeaders.PEHeader.ImageBase));
+        public VB6ObjectTable ObjectTable => new VB6ObjectTable(pe, ObjectTablePtr - (int)pe.PEHeaders.PEHeader.ImageBase);
 
         /// <summary>
         /// Always set to -1 after compiling. Unused.
         /// </summary>
-        public int Reserved => BinaryPrimitives.ReadInt32LittleEndian(memory[0x8..0xc]);
+        public int Reserved => BinaryPrimitives.ReadInt32LittleEndian(Span[0x8..0xc]);
 
         /// <summary>
         /// Not written or read in any case.
         /// </summary>
-        public int Unused => BinaryPrimitives.ReadInt32LittleEndian(memory[0xc..0x10]);
+        public int Unused => BinaryPrimitives.ReadInt32LittleEndian(Span[0xc..0x10]);
 
         /// <summary>
-        /// Pointer to object descriptor pointers.
+        /// Gets the pointers to the object list.
         /// </summary>
-        public int ObjectListPtr => BinaryPrimitives.ReadInt32LittleEndian(memory[0x10..0x14]);
+        int ObjectListPtr => BinaryPrimitives.ReadInt32LittleEndian(Span[0x10..0x14]);
 
         /// <summary>
         /// Not written or read in any case.
         /// </summary>
-        public int Unused2 => BinaryPrimitives.ReadInt32LittleEndian(memory[0x14..0x18]);
+        public int Unused2 => BinaryPrimitives.ReadInt32LittleEndian(Span[0x14..0x18]);
 
         /// <summary>
-        /// Product description.
+        /// Gets the project description.
         /// </summary>
-        public string ProjectDescription => ReadAbsoluteCString(BinaryPrimitives.ReadInt32LittleEndian(memory[0x18..0x1c]));
+        public string ProjectDescription => ReadAbsoluteCString(BinaryPrimitives.ReadInt32LittleEndian(Span[0x18..0x1c]));
 
         /// <summary>
-        /// Product help fle.
+        /// Gets the project helpf ile name.
         /// </summary>
-        public string ProjectHelpFile => ReadAbsoluteCString(BinaryPrimitives.ReadInt32LittleEndian(memory[0x1c..0x20]));
+        public string ProjectHelpFileName => ReadAbsoluteCString(BinaryPrimitives.ReadInt32LittleEndian(Span[0x1c..0x20]));
 
         /// <summary>
         /// Always set to -1 after compiling. Unused.
         /// </summary>
-        public int Reserved2 => BinaryPrimitives.ReadInt32LittleEndian(memory[0x20..0x24]);
+        public int Reserved2 => BinaryPrimitives.ReadInt32LittleEndian(Span[0x20..0x24]);
 
         /// <summary>
-        /// Help Context ID set in Project Settings.
+        /// Gets the help context ID.
         /// </summary>
-        public int HelpContextId => BinaryPrimitives.ReadInt32LittleEndian(memory[0x24..0x28]);
+        public int HelpContextId => BinaryPrimitives.ReadInt32LittleEndian(Span[0x24..0x28]);
 
         /// <summary>
         /// Reads a BSTR from the given offset pointer.
@@ -86,7 +93,7 @@ namespace VB6DotNet.Metadata
         /// <returns></returns>
         unsafe string ReadAbsoluteCString(int ptr)
         {
-            return pe.ToSpan().Slice(ptr - (int)pe.PEHeaders.PEHeader.ImageBase).ToStringForCString();
+            return pe.ToSpan(ptr - (int)pe.PEHeaders.PEHeader.ImageBase).ToStringForCString();
         }
 
     }

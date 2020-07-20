@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Linq;
 using System.Reflection.PortableExecutable;
 
 using FluentAssertions;
@@ -18,13 +19,49 @@ namespace VB6DotNet.Metadata.Tests
             var pe = new PEReader(File.OpenRead(@"C:\dev\vb6exm\TestExe.exe"));
             var vb = pe.GetVB6MetadataReader();
             var pi = vb.ProjectInfo;
-            pi.Magic.Should().Be("VB5!");
+            pi.Signature.Should().Be("VB5!");
             pi.ProjectExeName.Should().Be("TestExe");
             pi.ProjectName.Should().Be("TestExe");
             pi.ProjectDescription.Should().Be("TestExe");
-            pi.ProjectHelpFile.Should().Be("TestExeHelpFileName");
-            pi.ProjectData.ObjectTable.ProjectName.Should().Be("TestExe");
-            pi.ProjectData.ObjectTable.ProjectInfo2.ProjectDescription.Should().Be("TestExeDesc");
+            pi.ProjectHelpFileName.Should().Be("TestExeHelpFileName");
+            pi.ProjectInfo.ObjectTable.ProjectName.Should().Be("TestExe");
+            pi.ProjectInfo.ObjectTable.ProjectInfo2.ProjectDescription.Should().Be("TestExeDesc");
+            pi.ProjectInfo.ObjectTable.ProjectInfo2.ProjectHelpFileName.Should().Be("TestExeHelpFileName");
+
+            var frm = pi.ProjectInfo.ObjectTable.Objects.FirstOrDefault(i => i.ObjectName == "TestExeFormA");
+            frm.Should().NotBeNull();
+            frm.ObjectType.Should().HaveFlag(VB6ObjectTypeFlags.HasOptionalInfo);
+            frm.ObjectType.Should().HaveFlag(VB6ObjectTypeFlags.IsForm);
+            frm.ObjectType.Should().NotHaveFlag(VB6ObjectTypeFlags.Unknown2);
+            frm.ObjectInfo.ProcedureCount.Should().Be(3);
+            frm.ObjectInfo.Procedures.Count.Should().Be(3);
+            frm.ObjectInfo.Procedures.Should().HaveCount(3);
+            frm.ProcedureNames.Should().HaveCount(3);
+            frm.ProcedureNames.Should().Contain("FormAMethodA");
+            frm.ProcedureNames.Should().Contain("FormAMethodB");
+            frm.ProcedureNames.Should().Contain("FormAMethodC");
+
+            var bas = pi.ProjectInfo.ObjectTable.Objects.FirstOrDefault(i => i.ObjectName == "TestExeModuleA");
+            bas.Should().NotBeNull();
+            bas.ObjectType.Should().NotHaveFlag(VB6ObjectTypeFlags.HasOptionalInfo);
+            bas.ObjectType.Should().NotHaveFlag(VB6ObjectTypeFlags.IsForm);
+            bas.ObjectType.Should().NotHaveFlag(VB6ObjectTypeFlags.Unknown2);
+            bas.ObjectInfo.ProcedureCount.Should().Be(3);
+            bas.ObjectInfo.Procedures.Count.Should().Be(3);
+            bas.ObjectInfo.Procedures.Should().HaveCount(3);
+
+            var cls = pi.ProjectInfo.ObjectTable.Objects.FirstOrDefault(i => i.ObjectName == "TestExeClassA");
+            cls.Should().NotBeNull();
+            cls.ObjectType.Should().HaveFlag(VB6ObjectTypeFlags.HasOptionalInfo);
+            cls.ObjectType.Should().NotHaveFlag(VB6ObjectTypeFlags.IsForm);
+            cls.ObjectType.Should().NotHaveFlag(VB6ObjectTypeFlags.Unknown2);
+            cls.ObjectInfo.ProcedureCount.Should().Be(3);
+            cls.ObjectInfo.Procedures.Count.Should().Be(3);
+            cls.ObjectInfo.Procedures.Should().HaveCount(3);
+            cls.ProcedureNames.Should().HaveCount(3);
+            cls.ProcedureNames.Should().Contain("ClassAMethodA");
+            cls.ProcedureNames.Should().Contain("ClassAMethodB");
+            cls.ProcedureNames.Should().Contain("ClassAMethodC");
         }
 
         [TestMethod]
@@ -33,12 +70,36 @@ namespace VB6DotNet.Metadata.Tests
             var pe = new PEReader(File.OpenRead(@"C:\dev\vb6exm\TestDll.dll"));
             var vb = pe.GetVB6MetadataReader();
             var pi = vb.ProjectInfo;
-            var mg = pi.Magic;
-            var nm = pi.ProjectExeName;
-            var zn = pi.ProjectName;
-            var vz = pi.ProjectData.Version;
-            var ob = pi.ProjectData.ObjectTable;
-            var zz = pi.ProjectData.ObjectTable.ProjectName;
+            pi.Signature.Should().Be("VB5!");
+            pi.ProjectExeName.Should().Be("TestDll");
+            pi.ProjectName.Should().Be("TestDll");
+            pi.ProjectDescription.Should().Be("TestDll");
+            pi.ProjectHelpFileName.Should().Be("TestDllHelpFileName");
+            pi.ProjectInfo.ObjectTable.ProjectName.Should().Be("TestDll");
+            pi.ProjectInfo.ObjectTable.ProjectInfo2.ProjectDescription.Should().Be("TestDllDesc");
+            pi.ProjectInfo.ObjectTable.ProjectInfo2.ProjectHelpFileName.Should().Be("TestDllHelpFileName");
+
+            var bas = pi.ProjectInfo.ObjectTable.Objects.FirstOrDefault(i => i.ObjectName == "TestDllModuleA");
+            bas.Should().NotBeNull();
+            bas.ObjectType.Should().NotHaveFlag(VB6ObjectTypeFlags.HasOptionalInfo);
+            bas.ObjectType.Should().NotHaveFlag(VB6ObjectTypeFlags.IsForm);
+            bas.ObjectType.Should().NotHaveFlag(VB6ObjectTypeFlags.Unknown2);
+            bas.ObjectInfo.ProcedureCount.Should().Be(3);
+            bas.ObjectInfo.Procedures.Count.Should().Be(3);
+            bas.ObjectInfo.Procedures.Should().HaveCount(3);
+
+            var cls = pi.ProjectInfo.ObjectTable.Objects.FirstOrDefault(i => i.ObjectName == "TestDllClassA");
+            cls.Should().NotBeNull();
+            cls.ObjectType.Should().HaveFlag(VB6ObjectTypeFlags.HasOptionalInfo);
+            cls.ObjectType.Should().NotHaveFlag(VB6ObjectTypeFlags.IsForm);
+            cls.ObjectType.Should().NotHaveFlag(VB6ObjectTypeFlags.Unknown2);
+            cls.ObjectInfo.ProcedureCount.Should().Be(3);
+            cls.ObjectInfo.Procedures.Count.Should().Be(3);
+            cls.ObjectInfo.Procedures.Should().HaveCount(3);
+            cls.ProcedureNames.Should().HaveCount(3);
+            cls.ProcedureNames.Should().Contain("ClassAMethodA");
+            cls.ProcedureNames.Should().Contain("ClassAMethodB");
+            cls.ProcedureNames.Should().Contain("ClassAMethodC");
         }
 
     }
