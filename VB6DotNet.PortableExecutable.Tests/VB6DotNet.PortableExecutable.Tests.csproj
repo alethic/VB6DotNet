@@ -15,4 +15,13 @@
         <ProjectReference Include="..\VB6DotNet.PortableExecutable\VB6DotNet.PortableExecutable.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="vb6\TestDll\TestDll.dll">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+      <None Update="vb6\TestExe\TestExe.exe">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>

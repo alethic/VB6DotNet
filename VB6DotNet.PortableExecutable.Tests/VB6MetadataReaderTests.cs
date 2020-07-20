@@ -16,7 +16,7 @@ namespace VB6DotNet.PortableExecutable.Tests
         [TestMethod]
         public void Test_exe()
         {
-            var pe = new PEReader(File.OpenRead(@"C:\dev\vb6exm\TestExe.exe"));
+            var pe = new PEReader(File.OpenRead(@"vb6\TestExe\TestExe.exe"));
             var vb = pe.GetVB6MetadataReader();
             var pi = vb.ProjectInfo;
             pi.Signature.Should().Be("VB5!");
@@ -67,7 +67,7 @@ namespace VB6DotNet.PortableExecutable.Tests
         [TestMethod]
         public void Test_dll()
         {
-            var pe = new PEReader(File.OpenRead(@"C:\dev\vb6exm\TestDll.dll"));
+            var pe = new PEReader(File.OpenRead(@"vb6\TestDll\TestDll.dll"));
             var vb = pe.GetVB6MetadataReader();
             var pi = vb.ProjectInfo;
             pi.Signature.Should().Be("VB5!");
