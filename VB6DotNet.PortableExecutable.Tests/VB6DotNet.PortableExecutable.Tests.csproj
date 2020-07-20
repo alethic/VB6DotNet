@@ -12,7 +12,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\VB6DotNet.Metadata\VB6DotNet.PortableExecutable.csproj" />
         <ProjectReference Include="..\VB6DotNet.PortableExecutable\VB6DotNet.PortableExecutable.csproj" />
     </ItemGroup>
 
