@@ -57,6 +57,11 @@ namespace VB6DotNet.PortableExecutable
         int PublicBytesPtr => BinaryPrimitives.ReadInt32LittleEndian(Span[0x8..0xc]);
 
         /// <summary>
+        /// Pointer to public variable size integers. 
+        /// </summary>
+        public VB6PublicBytes PublicBytes => new VB6PublicBytes(pe, PublicBytesPtr - (int)pe.PEHeaders.PEHeader.ImageBase);
+
+        /// <summary>
         /// Pointer to static variable size integers.
         /// </summary>
         int StaticBytesPtr => BinaryPrimitives.ReadInt32LittleEndian(Span[0xc..0x10]);

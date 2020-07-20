@@ -1,0 +1,59 @@
+﻿<#@ template language="C#" hostspecific="true" #>
+<#@ output extension="partial.cs" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="$(UserProfile)\.nuget\packages\Newtonsoft.Json\12.0.3\lib\net45\Newtonsoft.Json.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="Newtonsoft.Json" #>
+<#@ import namespace="Newtonsoft.Json.Linq" #>
+<#
+
+var f = Host.ResolvePath("PCodeOp.json");
+if (File.Exists(f) == false)
+    throw new InvalidOperationException();;
+
+// load rows
+var pcodes = JArray.Parse(File.ReadAllText(f))
+    .OfType<JObject>()
+    .ToArray();
+
+#>
+
+using System;
+
+namespace VBDotNet6.PCode
+{
+
+    public enum PCodeOp : ulong
+    {
+
+<#
+foreach (var pcode in pcodes)
+{
+#>
+        <#= pcode["name"] #> = <#= pcode["code"] #>,
+<#
+}
+#>
+
+    }
+
+<#
+foreach (var pcode in pcodes)
+{
+#>
+    public partial class <#= pcode["name"] #>
+    {
+
+        
+
+    }
+<#
+}
+#>
+
+}

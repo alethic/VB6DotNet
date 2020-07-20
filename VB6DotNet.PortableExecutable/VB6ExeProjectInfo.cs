@@ -46,12 +46,12 @@ namespace VB6DotNet.PortableExecutable
         /// <summary>
         /// Language DLL.
         /// </summary>
-        public string LanguageDll => Span[0x6..0x14].ToStringForCString();
+        public string LanguageDllName => Span[0x6..0x14].ToStringForCString();
 
         /// <summary>
         /// Backup language DLL.
         /// </summary>
-        public string BackupLanguageDll => Span[0x14..0x22].ToStringForCString();
+        public string SecLanguageDllName => Span[0x14..0x22].ToStringForCString();
 
         /// <summary>
         /// Runtime DLL version.
@@ -61,12 +61,12 @@ namespace VB6DotNet.PortableExecutable
         /// <summary>
         /// LCID of language DLL.
         /// </summary>
-        public int Lcid => BinaryPrimitives.ReadInt32LittleEndian(Span[0x24..0x28]);
+        public int LanguageId => BinaryPrimitives.ReadInt32LittleEndian(Span[0x24..0x28]);
 
         /// <summary>
         /// LCID of backup language DLL.
         /// </summary>
-        public int BackupLcid => BinaryPrimitives.ReadInt32LittleEndian(Span[0x28..0x2c]);
+        public int SecLanguageId => BinaryPrimitives.ReadInt32LittleEndian(Span[0x28..0x2c]);
 
         /// <summary>
         /// Pointer to the main code.
@@ -86,12 +86,12 @@ namespace VB6DotNet.PortableExecutable
         /// <summary>
         /// Control flags.
         /// </summary>
-        public VB6ExeProjectInfoControlFlags1 ControlFlags1 => (VB6ExeProjectInfoControlFlags1)BinaryPrimitives.ReadUInt32LittleEndian(Span[0x34..0x38]);
+        public MDLInternalObjectFlags MDLIntObjs => (MDLInternalObjectFlags)BinaryPrimitives.ReadUInt32LittleEndian(Span[0x34..0x38]);
 
         /// <summary>
         /// Second control flags.
         /// </summary>
-        public VB6ExeProjectInfoControlFlags2 ControlFlags2 => (VB6ExeProjectInfoControlFlags2)BinaryPrimitives.ReadUInt32LittleEndian(Span[0x38..0x3c]);
+        public MDLInternalObjectFlags2 MDLIntObjs2 => (MDLInternalObjectFlags2)BinaryPrimitives.ReadUInt32LittleEndian(Span[0x38..0x3c]);
 
         /// <summary>
         /// Thread flags.
@@ -106,12 +106,12 @@ namespace VB6DotNet.PortableExecutable
         /// <summary>
         /// Number of forms.
         /// </summary>
-        public short FormCount => BinaryPrimitives.ReadInt16LittleEndian(Span[0x44..0x46]);
+        public short GUIObjectCount => BinaryPrimitives.ReadInt16LittleEndian(Span[0x44..0x46]);
 
         /// <summary>
         /// Number of external controls.
         /// </summary>
-        public short ExternalCount => BinaryPrimitives.ReadInt16LittleEndian(Span[0x46..0x48]);
+        public short ComponentCount => BinaryPrimitives.ReadInt16LittleEndian(Span[0x46..0x48]);
 
         /// <summary>
         /// Number of thunks to create.
@@ -121,32 +121,32 @@ namespace VB6DotNet.PortableExecutable
         /// <summary>
         /// Pointer to GUI Table.
         /// </summary>
-        int GuiTablePtr => BinaryPrimitives.ReadInt32LittleEndian(Span[0x4c..0x50]);
+        int GUIObjectArrayPtr => BinaryPrimitives.ReadInt32LittleEndian(Span[0x4c..0x50]);
 
         /// <summary>
         /// Pointer to External Table.
         /// </summary>
-        int ExternalTablePtr => BinaryPrimitives.ReadInt32LittleEndian(Span[0x50..0x54]);
+        int ComponentArrayPtr => BinaryPrimitives.ReadInt32LittleEndian(Span[0x50..0x54]);
 
         /// <summary>
         /// Pointer to COM Information.
         /// </summary>
-        int ComRegisterDataPtr => BinaryPrimitives.ReadInt32LittleEndian(Span[0x54..0x58]);
+        int COMRegDataPtr => BinaryPrimitives.ReadInt32LittleEndian(Span[0x54..0x58]);
 
         /// <summary>
-        /// Gets the project description.
+        /// Gets the project EXE name.
         /// </summary>
-        public string ProjectDescription => ReadRelativeCString(BinaryPrimitives.ReadInt32LittleEndian(Span[0x58..0x5c]));
+        public string ProjectExeName => ReadRelativeCString(BinaryPrimitives.ReadInt32LittleEndian(Span[0x58..0x5c]));
 
         /// <summary>
-        /// Gets the name of the project EXE.
+        /// Gets the project description..
         /// </summary>
-        public string ProjectExeName => ReadRelativeCString(BinaryPrimitives.ReadInt32LittleEndian(Span[0x5c..0x60]));
+        public string ProjectTitle => ReadRelativeCString(BinaryPrimitives.ReadInt32LittleEndian(Span[0x5c..0x60]));
 
         /// <summary>
-        /// Gets the name of the project help file.
+        /// Gets the project help file.
         /// </summary>
-        public string ProjectHelpFileName => ReadRelativeCString(BinaryPrimitives.ReadInt32LittleEndian(Span[0x60..0x64]));
+        public string HelpFile => ReadRelativeCString(BinaryPrimitives.ReadInt32LittleEndian(Span[0x60..0x64]));
 
         /// <summary>
         /// Gets the project name.

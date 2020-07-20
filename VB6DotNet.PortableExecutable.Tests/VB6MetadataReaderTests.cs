@@ -20,10 +20,10 @@ namespace VB6DotNet.PortableExecutable.Tests
             var vb = pe.GetVB6MetadataReader();
             var pi = vb.ProjectInfo;
             pi.Signature.Should().Be("VB5!");
-            pi.ProjectExeName.Should().Be("TestExe");
+            pi.ProjectTitle.Should().Be("TestExe");
             pi.ProjectName.Should().Be("TestExe");
-            pi.ProjectDescription.Should().Be("TestExe");
-            pi.ProjectHelpFileName.Should().Be("TestExeHelpFileName");
+            pi.ProjectExeName.Should().Be("TestExe");
+            pi.HelpFile.Should().Be("TestExeHelpFileName");
             pi.ProjectInfo.ObjectTable.ProjectName.Should().Be("TestExe");
             pi.ProjectInfo.ObjectTable.ProjectInfo2.ProjectDescription.Should().Be("TestExeDesc");
             pi.ProjectInfo.ObjectTable.ProjectInfo2.ProjectHelpFileName.Should().Be("TestExeHelpFileName");
@@ -62,6 +62,8 @@ namespace VB6DotNet.PortableExecutable.Tests
             cls.ProcedureNames.Should().Contain("ClassAMethodA");
             cls.ProcedureNames.Should().Contain("ClassAMethodB");
             cls.ProcedureNames.Should().Contain("ClassAMethodC");
+
+            var d = cls.ObjectInfo.Procedures[0].ProcCode;
         }
 
         [TestMethod]
@@ -71,10 +73,10 @@ namespace VB6DotNet.PortableExecutable.Tests
             var vb = pe.GetVB6MetadataReader();
             var pi = vb.ProjectInfo;
             pi.Signature.Should().Be("VB5!");
-            pi.ProjectExeName.Should().Be("TestDll");
+            pi.ProjectTitle.Should().Be("TestDll");
             pi.ProjectName.Should().Be("TestDll");
-            pi.ProjectDescription.Should().Be("TestDll");
-            pi.ProjectHelpFileName.Should().Be("TestDllHelpFileName");
+            pi.ProjectExeName.Should().Be("TestDll");
+            pi.HelpFile.Should().Be("TestDllHelpFileName");
             pi.ProjectInfo.ObjectTable.ProjectName.Should().Be("TestDll");
             pi.ProjectInfo.ObjectTable.ProjectInfo2.ProjectDescription.Should().Be("TestDllDesc");
             pi.ProjectInfo.ObjectTable.ProjectInfo2.ProjectHelpFileName.Should().Be("TestDllHelpFileName");

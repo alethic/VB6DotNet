@@ -78,18 +78,24 @@ namespace VB6DotNet.PortableExecutable
         /// </summary>
         int NativeCodePtr => BinaryPrimitives.ReadInt32LittleEndian(Span[0x20..0x24]);
 
+        short ProjectLocation => BinaryPrimitives.ReadInt16LittleEndian(Span.Slice(0x24, 2));
+
+        short Flag2 => BinaryPrimitives.ReadInt16LittleEndian(Span.Slice(0x26, 2));
+
+        short Flag3 => BinaryPrimitives.ReadInt16LittleEndian(Span.Slice(0x28, 2));
+
         /// <summary>
         /// Contains Path and ID string.
         /// </summary>
-        public ReadOnlySpan<byte> PathInformation => Span[0x24..0x234];
+        public ReadOnlySpan<byte> OriginalPathName => Span[0x2a..0x234];
 
         /// <summary>
-        /// Pointer to external table.
+        /// Pointer to import table.
         /// </summary>
         int ExternalTablePtr => BinaryPrimitives.ReadInt32LittleEndian(Span[0x234..0x238]);
 
         /// <summary>
-        /// Gets the external table.
+        /// Gets the import table.
         /// </summary>
         public VB6ExternalTable ExternalTable => new VB6ExternalTable(pe, ExternalTablePtr - (int)pe.PEHeaders.PEHeader.ImageBase);
 
