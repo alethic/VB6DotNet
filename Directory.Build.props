@@ -1,0 +1,12 @@
+<Project>
+    <PropertyGroup>
+        <Authors>Jerome Haltom</Authors>
+        <Company>Alethic Solutions</Company>
+        <RepositoryUrl>https://github.com/alethic/VB6DotNet</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageLicenseUrl></PackageLicenseUrl>
+        <PackageProjectUrl>https://github.com/wasabii/alethic/VB6DotNet</PackageProjectUrl>
+        <PackageTags>vb6 visualbasic visual basic</PackageTags>
+        <LangVersion>8.0</LangVersion>
+    </PropertyGroup>
+</Project>
