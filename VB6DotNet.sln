@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VB6DotNet.Parser", "VB6DotNet.Parser\VB6DotNet.Parser.csproj", "{A0B6645F-0FDA-48FF-88AE-B452FCC32FD5}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VB6DotNet.Parser.Tests", "VB6DotNet.Parser.Tests\VB6DotNet.Parser.Tests.csproj", "{E0054EFD-C456-4C03-8DB1-075C689E8E4A}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VB6DotNet.PortableExecutable", "VB6DotNet.PortableExecutable\VB6DotNet.PortableExecutable.csproj", "{BB166052-CBC4-46DB-8E06-D886AD190255}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VB6DotNet.PortableExecutable.Tests", "VB6DotNet.PortableExecutable.Tests\VB6DotNet.PortableExecutable.Tests.csproj", "{24E90696-1EA9-4F12-89D9-7A0C86712935}"
@@ -17,14 +13,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{A0B6645F-0FDA-48FF-88AE-B452FCC32FD5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A0B6645F-0FDA-48FF-88AE-B452FCC32FD5}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A0B6645F-0FDA-48FF-88AE-B452FCC32FD5}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A0B6645F-0FDA-48FF-88AE-B452FCC32FD5}.Release|Any CPU.Build.0 = Release|Any CPU
-		{E0054EFD-C456-4C03-8DB1-075C689E8E4A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{E0054EFD-C456-4C03-8DB1-075C689E8E4A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{E0054EFD-C456-4C03-8DB1-075C689E8E4A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{E0054EFD-C456-4C03-8DB1-075C689E8E4A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{BB166052-CBC4-46DB-8E06-D886AD190255}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{BB166052-CBC4-46DB-8E06-D886AD190255}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BB166052-CBC4-46DB-8E06-D886AD190255}.Release|Any CPU.ActiveCfg = Release|Any CPU
