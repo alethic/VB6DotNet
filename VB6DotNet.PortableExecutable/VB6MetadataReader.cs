@@ -60,12 +60,12 @@ namespace VB6DotNet.PortableExecutable
                 throw new BadImageFormatException("Expected PUSH instruction at entry point. Executable might not be a VB6 executable.");
 
             // argument should be 32 bits
-            var of = rd.ReadUInt32();
+            var of = rd.ReadInt32();
             if (of == 0)
                 throw new BadImageFormatException("Unexpected null offset locating project info offset. Executable might not be a VB6 executable.");
 
             // address offset is from image base
-            return (int)(of - pe.PEHeaders.PEHeader.ImageBase);
+            return of - (int)pe.PEHeaders.PEHeader.ImageBase;
         }
 
         /// <summary>
@@ -111,7 +111,7 @@ namespace VB6DotNet.PortableExecutable
                         continue;
 
                     // arg should be pointer to header with magic value
-                    var h = BinaryPrimitives.ReadInt32LittleEndian(c[(i + 1)..(i + 5)]) - (int)pe.PEHeaders.PEHeader.ImageBase;
+                    var h = BinaryPrimitives.ReadInt32LittleEndian(c.Slice(i + 1, 4)) - (int)pe.PEHeaders.PEHeader.ImageBase;
                     var s = Encoding.ASCII.GetString(pe.ToSpan(h, 4));
                     if (s == "VB5!")
                         return h;

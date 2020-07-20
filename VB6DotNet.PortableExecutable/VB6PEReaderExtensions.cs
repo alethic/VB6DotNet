@@ -3,6 +3,9 @@
 namespace VB6DotNet.PortableExecutable
 {
 
+    /// <summary>
+    /// Provides extensions to the <see cref="PEReader"/> class.
+    /// </summary>
     public static class VB6PEReaderExtensions
     {
 

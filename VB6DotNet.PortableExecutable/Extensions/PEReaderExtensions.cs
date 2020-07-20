@@ -30,7 +30,7 @@ namespace VB6DotNet.PortableExecutable.Extensions
         /// <returns></returns>
         public static ReadOnlySpan<byte> ToSpan(this PEReader self, int start, int count)
         {
-            return ToSpan(self)[start..(start + count)];
+            return ToSpan(self).Slice(start, count);
         }
 
         /// <summary>
@@ -41,7 +41,7 @@ namespace VB6DotNet.PortableExecutable.Extensions
         /// <returns></returns>
         public static ReadOnlySpan<byte> ToSpan(this PEReader self, int start)
         {
-            return ToSpan(self)[start..];
+            return ToSpan(self).Slice(start);
         }
 
     }
