@@ -20,6 +20,7 @@ namespace VB6DotNet.PortableExecutable
         /// <summary>
         /// Initializes a new instance.
         /// </summary>
+        /// <param name="pe"></param>
         internal VB6MetadataReader(PEReader pe)
         {
             this.pe = pe ?? throw new ArgumentNullException(nameof(pe));
@@ -28,19 +29,19 @@ namespace VB6DotNet.PortableExecutable
         /// <summary>
         /// Gets the project info structure.
         /// </summary>
-        public VB6ExeProjectInfo ProjectInfo => new VB6ExeProjectInfo(pe, GetExeProjectInfoAddress(pe.GetEntireImage()));
+        public VB6ExeProjectInfo ProjectInfo => new VB6ExeProjectInfo(pe, GetExeProjectInfoAddress());
 
         /// <summary>
         /// Gets the VB Project Info structure data offset.
         /// </summary>
         /// <returns></returns>
-        int GetExeProjectInfoAddress(PEMemoryBlock mb)
+        int GetExeProjectInfoAddress()
         {
             if (pe.PEHeaders.IsDll)
-                return GetExeProjectInfoAddressOffsetForLibrary(mb);
+                return GetExeProjectInfoAddressOffsetForLibrary();
 
             if (pe.PEHeaders.IsExe)
-                return GetExeProjectInfoAddressOffsetForExecutable(mb);
+                return GetExeProjectInfoAddressOffsetForExecutable();
 
             throw new BadImageFormatException();
         }
@@ -49,18 +50,18 @@ namespace VB6DotNet.PortableExecutable
         /// Gets the offset within the PE of the VB project info structure for an executable.
         /// </summary>
         /// <returns></returns>
-        int GetExeProjectInfoAddressOffsetForExecutable(PEMemoryBlock mb)
+        int GetExeProjectInfoAddressOffsetForExecutable()
         {
             var ep = pe.PEHeaders.PEHeader.AddressOfEntryPoint;
-            var rd = mb.GetReader(ep, 10);
+            var rd = pe.ToSpan(ep, 5);
 
             // first byte should be push instruction with offset as argument
-            var i1 = rd.ReadByte();
+            var i1 = rd[0];
             if (i1 != 0x68) // PUSH
                 throw new BadImageFormatException("Expected PUSH instruction at entry point. Executable might not be a VB6 executable.");
 
             // argument should be 32 bits
-            var of = rd.ReadInt32();
+            var of = BinaryPrimitives.ReadInt32LittleEndian(rd.Slice(1, 4));
             if (of == 0)
                 throw new BadImageFormatException("Unexpected null offset locating project info offset. Executable might not be a VB6 executable.");
 
@@ -73,14 +74,14 @@ namespace VB6DotNet.PortableExecutable
         /// </summary>
         /// <param name="mb"></param>
         /// <returns></returns>
-        int GetExeProjectInfoAddressOffsetForLibrary(PEMemoryBlock mb)
+        int GetExeProjectInfoAddressOffsetForLibrary()
         {
             var ed = pe.ReadExportTableDirectory();
             if (ed.Count == 0)
                 throw new BadImageFormatException("Could not locate export table directory. Executable might not be a VB6 library.");
 
             var et = ed[0];
-            foreach (var funcName in new[] { "DllCanUnloadNow", "DllRegisterServer", "DllUnregisterServer", "DllGetClassObject" })
+            foreach (var funcName in new[] { "DllCanUnloadNow", "DllGetClassObject", "DllRegisterServer", "DllUnregisterServer" })
             {
                 // find named export
                 var o = -1;
@@ -113,7 +114,7 @@ namespace VB6DotNet.PortableExecutable
                     // arg should be pointer to header with magic value
                     var h = BinaryPrimitives.ReadInt32LittleEndian(c.Slice(i + 1, 4)) - (int)pe.PEHeaders.PEHeader.ImageBase;
                     var s = Encoding.ASCII.GetString(pe.ToSpan(h, 4));
-                    if (s == "VB5!")
+                    if (s == VB6ExeProjectInfo.Magic)
                         return h;
                 }
             }

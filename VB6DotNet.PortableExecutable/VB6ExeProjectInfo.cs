@@ -11,6 +11,7 @@ namespace VB6DotNet.PortableExecutable
     public readonly struct VB6ExeProjectInfo
     {
 
+        internal const string Magic = "VB5!";
         internal const int Size = 104;
 
         readonly int offset;
@@ -26,7 +27,7 @@ namespace VB6DotNet.PortableExecutable
             this.pe = pe ?? throw new ArgumentNullException(nameof(pe));
             this.offset = offset;
 
-            if (Signature != "VB5!")
+            if (Signature != Magic)
                 throw new BadImageFormatException("Image is not a VB6 portable executable.");
         }
 
