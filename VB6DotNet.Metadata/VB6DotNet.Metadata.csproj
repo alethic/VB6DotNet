@@ -5,7 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\VB6DotNet.PortableExecutable\VB6DotNet.PortableExecutable.csproj" />
+    <ProjectReference Include="..\VB6DotNet.Metadata.PortableExecutable\VB6DotNet.Metadata.PortableExecutable.csproj" />
+    <ProjectReference Include="..\VB6DotNet.PCode\VB6DotNet.PCode.csproj" />
   </ItemGroup>
 
 </Project>

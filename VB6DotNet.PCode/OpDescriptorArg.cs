@@ -85,6 +85,7 @@ namespace VB6DotNet.PCode
                 OpArgType.Inline => $"[{valueType}]",
                 OpArgType.Constant => $"[{valueType}] const",
                 OpArgType.Variable => $"[{valueType}] var",
+                OpArgType.Argument => $"[{valueType}] arg",
                 _ => throw new InvalidOperationException(),
             };
         }

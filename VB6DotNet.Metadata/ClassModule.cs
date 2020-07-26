@@ -1,6 +1,6 @@
 ﻿using System;
 
-using VB6DotNet.PortableExecutable;
+using VB6DotNet.Metadata.PortableExecutable;
 
 namespace VB6DotNet.Metadata
 {

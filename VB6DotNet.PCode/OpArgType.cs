@@ -20,7 +20,12 @@
         /// <summary>
         /// The argument represents a reference to a local variable.
         /// </summary>
-        Variable
+        Variable,
+
+        /// <summary>
+        /// The argument represents a reference to a local argument.
+        /// </summary>
+        Argument,
 
     }
 

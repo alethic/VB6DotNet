@@ -43,6 +43,7 @@ namespace VB6DotNet.PCode
                 OpArgType.Inline => $"[{arg.ValueType}] {BitConverter.ToString(data.ToArray()).Replace("-", "")}",
                 OpArgType.Constant => $"[{arg.ValueType}] const_{BinaryPrimitives.ReadInt16LittleEndian(data):X}",
                 OpArgType.Variable => $"[{arg.ValueType}] var_{-BinaryPrimitives.ReadInt16LittleEndian(data):X}",
+                OpArgType.Argument => $"[{arg.ValueType}] arg_{BinaryPrimitives.ReadInt16LittleEndian(data):X}",
                 _ => throw new InvalidOperationException(),
             };
         }

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-using VB6DotNet.PortableExecutable;
+using VB6DotNet.Metadata.PortableExecutable;
 
 namespace VB6DotNet.Metadata
 {
@@ -25,7 +25,7 @@ namespace VB6DotNet.Metadata
             {
                 var p = src.ObjectInfo.Procedures[i];
                 var n = src.ProcedureNames.Count > i ? src.ProcedureNames[i] : null;
-                Procedure.Load(p)
+                
             }
         }
 

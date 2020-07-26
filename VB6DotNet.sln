@@ -3,10 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30309.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VB6DotNet.PortableExecutable", "VB6DotNet.PortableExecutable\VB6DotNet.PortableExecutable.csproj", "{BB166052-CBC4-46DB-8E06-D886AD190255}"
-EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VB6DotNet.PortableExecutable.Tests", "VB6DotNet.PortableExecutable.Tests\VB6DotNet.PortableExecutable.Tests.csproj", "{24E90696-1EA9-4F12-89D9-7A0C86712935}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VB6DotNet.PCode", "VB6DotNet.PCode\VB6DotNet.PCode.csproj", "{A3C2F976-5D3B-4B8F-ADBB-98ABF45DB9CF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VB6DotNet.PCode.Tests", "VB6DotNet.PCode.Tests\VB6DotNet.PCode.Tests.csproj", "{15AE8F1C-F45A-4DB0-93DA-E8799347E584}"
@@ -17,20 +13,16 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VB6DotNet.Runtime.Interpret
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VB6DotNet.Metadata", "VB6DotNet.Metadata\VB6DotNet.Metadata.csproj", "{1800547B-94AC-4E09-9432-D4DF05A7F5D4}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VB6DotNet.Metadata.PortableExecutable", "VB6DotNet.Metadata.PortableExecutable\VB6DotNet.Metadata.PortableExecutable.csproj", "{1C54089E-764B-4DCB-96CD-40E2168653BF}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "VB6DotNet.Metadata.Tests", "VB6DotNet.Metadata.Tests\VB6DotNet.Metadata.Tests.csproj", "{309B3110-09AB-4050-858F-8E683FBFA337}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BB166052-CBC4-46DB-8E06-D886AD190255}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BB166052-CBC4-46DB-8E06-D886AD190255}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BB166052-CBC4-46DB-8E06-D886AD190255}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BB166052-CBC4-46DB-8E06-D886AD190255}.Release|Any CPU.Build.0 = Release|Any CPU
-		{24E90696-1EA9-4F12-89D9-7A0C86712935}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{24E90696-1EA9-4F12-89D9-7A0C86712935}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{24E90696-1EA9-4F12-89D9-7A0C86712935}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{24E90696-1EA9-4F12-89D9-7A0C86712935}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A3C2F976-5D3B-4B8F-ADBB-98ABF45DB9CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A3C2F976-5D3B-4B8F-ADBB-98ABF45DB9CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3C2F976-5D3B-4B8F-ADBB-98ABF45DB9CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -51,6 +43,14 @@ Global
 		{1800547B-94AC-4E09-9432-D4DF05A7F5D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1800547B-94AC-4E09-9432-D4DF05A7F5D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1800547B-94AC-4E09-9432-D4DF05A7F5D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C54089E-764B-4DCB-96CD-40E2168653BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C54089E-764B-4DCB-96CD-40E2168653BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C54089E-764B-4DCB-96CD-40E2168653BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C54089E-764B-4DCB-96CD-40E2168653BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{309B3110-09AB-4050-858F-8E683FBFA337}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{309B3110-09AB-4050-858F-8E683FBFA337}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{309B3110-09AB-4050-858F-8E683FBFA337}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{309B3110-09AB-4050-858F-8E683FBFA337}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
