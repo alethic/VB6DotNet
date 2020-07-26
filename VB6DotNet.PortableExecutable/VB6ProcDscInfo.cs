@@ -59,7 +59,27 @@ namespace VB6DotNet.PortableExecutable
         /// <summary>
         /// Gets the length of the procedure.
         /// </summary>
-        public short ProcSize => BinaryPrimitives.ReadInt16LittleEndian(Span[0x8..0xa]);
+        public short ProcSize => BinaryPrimitives.ReadInt16LittleEndian(Span[8..10]);
+
+        short FieldA => BinaryPrimitives.ReadInt16LittleEndian(Span.Slice(10));
+
+        short FieldC => BinaryPrimitives.ReadInt16LittleEndian(Span.Slice(12));
+
+        short FieldE => BinaryPrimitives.ReadInt16LittleEndian(Span.Slice(14));
+
+        short Field10 => BinaryPrimitives.ReadInt16LittleEndian(Span.Slice(16));
+
+        short Field12 => BinaryPrimitives.ReadInt16LittleEndian(Span.Slice(18));
+
+        short Field14 => BinaryPrimitives.ReadInt16LittleEndian(Span.Slice(20));
+
+        short Field16 => BinaryPrimitives.ReadInt16LittleEndian(Span.Slice(22));
+
+        short Field18 => BinaryPrimitives.ReadInt16LittleEndian(Span.Slice(24));
+
+        short Field1A => BinaryPrimitives.ReadInt16LittleEndian(Span.Slice(26));
+
+        short Flag => BinaryPrimitives.ReadInt16LittleEndian(Span.Slice(28));
 
     }
 

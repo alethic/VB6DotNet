@@ -27,6 +27,11 @@ namespace VB6DotNet.PortableExecutable
         }
 
         /// <summary>
+        /// Gets teh associated <see cref="PEReader"/>.
+        /// </summary>
+        public PEReader PortableExecutable => pe;
+
+        /// <summary>
         /// Gets the project info structure.
         /// </summary>
         public VB6ExeProjectInfo ProjectInfo => new VB6ExeProjectInfo(pe, GetExeProjectInfoAddress());

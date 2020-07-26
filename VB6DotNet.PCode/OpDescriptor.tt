@@ -1,0 +1,84 @@
+﻿<#@ template language="C#" hostspecific="true" #>
+<#@ output extension="partial.cs" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="$(UserProfile)\.nuget\packages\Newtonsoft.Json\12.0.3\lib\net45\Newtonsoft.Json.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="Newtonsoft.Json" #>
+<#@ import namespace="Newtonsoft.Json.Linq" #>
+<#
+
+var f = Host.ResolvePath("Code.json");
+if (File.Exists(f) == false)
+    throw new InvalidOperationException();;
+
+// load rows
+var pcodes = JArray.Parse(File.ReadAllText(f))
+    .OfType<JObject>()
+    .ToArray();
+
+#>
+using System;
+
+namespace VB6DotNet.PCode
+{
+
+    public partial class OpDescriptor
+    {
+
+<#
+foreach (var pcode in pcodes)
+{
+    if ((bool?)pcode["skip"] == true)
+        continue;
+
+    var name = (string)pcode["name"];
+    var code = (string)pcode["code"];
+    var desc = (string)pcode["desc"];
+    var args = (JArray)pcode["args"] ?? new JArray();
+
+    var argT = args.Count > 0 ? ", " + string.Join(", ", args.Select(i => $"\r\n            new OpDescriptorArg(OpArgType.{i["source"]}, OpArgValueType.{i["type"]})")) : "";
+
+    if (desc != null)
+    {
+#>
+        /// <summary>
+        /// <#= desc #>
+        /// </summary>
+<#
+    }
+#>
+        public static OpDescriptor <#= name #> { get; } = new OpDescriptor(
+            OpCode.<#= name #><#= argT #>);
+
+<#
+}
+#>
+
+        static OpDescriptor FromIdImpl(OpCode id)
+        {
+            return id switch
+            {
+<#
+foreach (var pcode in pcodes)
+{
+    if ((bool?)pcode["skip"] == true)
+        continue;
+
+    var name = (string)pcode["name"];
+#>
+                OpCode.<#= name #> => <#= name #>,
+<#
+}
+#>
+                _ => Invalid,
+            };
+        }
+
+    }
+
+}

@@ -12,7 +12,7 @@
 <#@ import namespace="Newtonsoft.Json.Linq" #>
 <#
 
-var f = Host.ResolvePath("PCodeOp.json");
+var f = Host.ResolvePath("Code.json");
 if (File.Exists(f) == false)
     throw new InvalidOperationException();;
 
@@ -22,38 +22,30 @@ var pcodes = JArray.Parse(File.ReadAllText(f))
     .ToArray();
 
 #>
-
 using System;
 
-namespace VBDotNet6.PCode
+namespace VB6DotNet.PCode
 {
 
-    public enum PCodeOp : ulong
+    public static class OpCodeName
     {
 
 <#
 foreach (var pcode in pcodes)
 {
+    if ((bool?)pcode["skip"] == true)
+        continue;
+
+    var name = (string)pcode["name"];
+    var mnem = name;
+    var code = (string)pcode["code"];
+
 #>
-        <#= pcode["name"] #> = <#= pcode["code"] #>,
+        public const string <#= name #> = "<#= mnem #>";
+
 <#
 }
 #>
-
     }
-
-<#
-foreach (var pcode in pcodes)
-{
-#>
-    public partial class <#= pcode["name"] #>
-    {
-
-        
-
-    }
-<#
-}
-#>
 
 }

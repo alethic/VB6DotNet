@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -13,6 +13,16 @@
 
   <ItemGroup>
     <ProjectReference Include="..\VB6DotNet.PCode\VB6DotNet.PCode.csproj" />
+    <ProjectReference Include="..\VB6DotNet.PortableExecutable\VB6DotNet.PortableExecutable.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="vb6\TestDll\TestDll.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="vb6\TestExe\TestExe.exe">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

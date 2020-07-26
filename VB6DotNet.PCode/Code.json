@@ -1,0 +1,5901 @@
+﻿[
+    {
+        "skip": true,
+        "code": "00",
+        "name": "Bos"
+    },
+    {
+        "skip": true,
+        "code": "01",
+        "name": "InvalidExcode"
+    },
+    {
+        "skip": true,
+        "code": "02",
+        "name": "Unknown1",
+        "dupe": "00"
+    },
+    {
+        "skip": true,
+        "code": "04",
+        "name": "FLdRfVar",
+        "args": [
+            {
+                "type": "Var"
+            }
+        ]
+    },
+    {
+        "skip": true,
+        "code": "05",
+        "name": "ImpAdLdRf"
+    },
+    {
+        "skip": true,
+        "code": "06",
+        "name": "MemLdRf"
+    },
+    {
+        "skip": true,
+        "code": "07",
+        "name": "FMemLdRf"
+    },
+    {
+        "skip": true,
+        "code": "08",
+        "name": "FLdPr"
+    },
+    {
+        "skip": true,
+        "code": "09",
+        "name": "ImpAdCallHresult"
+    },
+    {
+        "skip": true,
+        "code": "0A",
+        "name": "ImpAdCallFPR4"
+    },
+    {
+        "skip": true,
+        "code": "0B",
+        "name": "ImpAdCallI2"
+    },
+    {
+        "skip": true,
+        "code": "0C",
+        "name": "ImpAdCallCy"
+    },
+    {
+        "skip": true,
+        "code": "0D",
+        "name": "VCallHresult"
+    },
+    {
+        "skip": true,
+        "code": "0E",
+        "name": "VCallFPR8"
+    },
+    {
+        "skip": true,
+        "code": "0F",
+        "name": "VCallAd"
+    },
+    {
+        "skip": true,
+        "code": "10",
+        "name": "ThisVCallHresult"
+    },
+    {
+        "skip": true,
+        "code": "11",
+        "name": "ThisVCall"
+    },
+    {
+        "skip": true,
+        "code": "12",
+        "name": "ThisVCallAd"
+    },
+    {
+        "code": "13",
+        "name": "ExitProcHresult"
+    },
+    {
+        "code": "14",
+        "name": "ExitProc"
+    },
+    {
+        "skip": true,
+        "code": "15",
+        "name": "ExitProcI2"
+    },
+    {
+        "skip": true,
+        "code": "16",
+        "name": "ExitProcR4"
+    },
+    {
+        "skip": true,
+        "code": "17",
+        "name": "ExitProcR8"
+    },
+    {
+        "skip": true,
+        "code": "18",
+        "name": "ExitProcCy"
+    },
+    {
+        "skip": true,
+        "code": "19",
+        "name": "FStAdFunc"
+    },
+    {
+        "skip": true,
+        "code": "1A",
+        "name": "FFree1Ad"
+    },
+    {
+        "code": "1B",
+        "name": "LitStr",
+        "args": [
+            {
+                "source": "Inline",
+                "type": "String"
+            }
+        ]
+    },
+    {
+        "skip": true,
+        "code": "1C",
+        "name": "BranchF"
+    },
+    {
+        "skip": true,
+        "code": "1D",
+        "name": "BranchT"
+    },
+    {
+        "skip": true,
+        "code": "1E",
+        "name": "Branch"
+    },
+    {
+        "skip": true,
+        "code": "1F",
+        "name": "CRec2Ansi"
+    },
+    {
+        "skip": true,
+        "code": "20",
+        "name": "CRec2Uni"
+    },
+    {
+        "skip": true,
+        "code": "21",
+        "name": "FLdPrThis"
+    },
+    {
+        "skip": true,
+        "code": "22",
+        "name": "ImpAdLdPr"
+    },
+    {
+        "skip": true,
+        "code": "23",
+        "name": "FStStrNoPop"
+    },
+    {
+        "skip": true,
+        "code": "24",
+        "name": "NewIfNullPr"
+    },
+    {
+        "skip": true,
+        "code": "25",
+        "name": "PopAdLdVar"
+    },
+    {
+        "skip": true,
+        "code": "26",
+        "name": "AryDescTemp"
+    },
+    {
+        "skip": true,
+        "code": "27",
+        "name": "LitVar_Missing",
+        "desc": "A Variant variable is declared and initialized with a missing value."
+    },
+    {
+        "code": "28",
+        "name": "LitVarI2",
+        "desc": "A Variant variable is declared and initialized with an Integer which is then placed on the stack.",
+        "args": [
+            {
+                "source": "Variable",
+                "type": "Variant"
+            },
+            {
+                "source": "Inline",
+                "type": "Integer"
+            }
+        ]
+    },
+    {
+        "skip": true,
+        "code": "29",
+        "name": "FFreeAd"
+    },
+    {
+        "code": "2A",
+        "name": "ConcatStr",
+        "desc": "Perform concatination operation on two strings."
+    },
+    {
+        "skip": true,
+        "code": "2B",
+        "name": "PopTmpLdAd2",
+        "args": [
+            {
+                "type": "Var"
+            }
+        ]
+    },
+    {
+        "skip": true,
+        "code": "2C",
+        "name": "LateIdSt"
+    },
+    {
+        "skip": true,
+        "code": "2D",
+        "name": "AryUnlock"
+    },
+    {
+        "skip": true,
+        "code": "2E",
+        "name": "AryLock"
+    },
+    {
+        "skip": true,
+        "code": "2F",
+        "name": "FFree1Str"
+    },
+    {
+        "skip": true,
+        "code": "30",
+        "name": "PopTmpLdAd8"
+    },
+    {
+        "skip": true,
+        "code": "31",
+        "name": "FStStr"
+    },
+    {
+        "skip": true,
+        "code": "32",
+        "name": "FFreeStr"
+    },
+    {
+        "skip": true,
+        "code": "33",
+        "name": "LdFixedStr"
+    },
+    {
+        "skip": true,
+        "code": "34",
+        "name": "CStr2Ansi"
+    },
+    {
+        "skip": true,
+        "code": "35",
+        "name": "FFree1Var"
+    },
+    {
+        "skip": true,
+        "code": "36",
+        "name": "FFreeVar"
+    },
+    {
+        "skip": true,
+        "code": "37",
+        "name": "PopFPR4"
+    },
+    {
+        "skip": true,
+        "code": "38",
+        "name": "CopyBytes"
+    },
+    {
+        "skip": true,
+        "code": "39",
+        "name": "PopFPR8"
+    },
+    {
+        "code": "3A",
+        "name": "LitVarStr",
+        "desc": "Define string variant.",
+        "args": [
+            {
+                "source": "Variable",
+                "type": "String"
+            },
+            {
+                "source": "Constant",
+                "type": "String"
+            }
+        ]
+    },
+    {
+        "skip": true,
+        "code": "3B",
+        "name": "Ary1StStrCopy"
+    },
+    {
+        "code": "3C",
+        "name": "SetLastSystemError"
+    },
+    {
+        "skip": true,
+        "code": "3D",
+        "name": "CastAd"
+    },
+    {
+        "skip": true,
+        "code": "3E",
+        "name": "FLdZeroAd"
+    },
+    {
+        "code": "3F",
+        "name": "CVarCy",
+        "desc": "Convert to Variant from Currency."
+    },
+    {
+        "skip": true,
+        "code": "40",
+        "name": "Ary1LdRf"
+    },
+    {
+        "skip": true,
+        "code": "41",
+        "name": "Ary1LdPr"
+    },
+    {
+        "skip": true,
+        "code": "42",
+        "name": "CR4Var"
+    },
+    {
+        "skip": true,
+        "code": "43",
+        "name": "FStStrCopy"
+    },
+    {
+        "skip": true,
+        "code": "44",
+        "name": "CVarI2"
+    },
+    {
+        "skip": true,
+        "code": "45",
+        "name": "Error"
+    },
+    {
+        "skip": true,
+        "code": "46",
+        "name": "CVarStr"
+    },
+    {
+        "skip": true,
+        "code": "47",
+        "name": "StFixedStr"
+    },
+    {
+        "skip": true,
+        "code": "48",
+        "name": "ILdPr"
+    },
+    {
+        "skip": true,
+        "code": "49",
+        "name": "PopAdLd4"
+    },
+    {
+        "skip": true,
+        "code": "4A",
+        "name": "FnLenStr"
+    },
+    {
+        "skip": true,
+        "code": "4B",
+        "name": "OnErrorGoto"
+    },
+    {
+        "skip": true,
+        "code": "4C",
+        "name": "FnLBound"
+    },
+    {
+        "skip": true,
+        "code": "4D",
+        "name": "CVarRef"
+    },
+    {
+        "skip": true,
+        "code": "4E",
+        "name": "FStVarCopyObj"
+    },
+    {
+        "skip": true,
+        "code": "4F",
+        "name": "MidStr"
+    },
+    {
+        "skip": true,
+        "code": "50",
+        "name": "CI4Str"
+    },
+    {
+        "skip": true,
+        "code": "51",
+        "name": "Unknown2"
+    },
+    {
+        "skip": true,
+        "code": "52",
+        "name": "Ary1StVar"
+    },
+    {
+        "skip": true,
+        "code": "53",
+        "name": "CBoolCy"
+    },
+    {
+        "skip": true,
+        "code": "54",
+        "name": "FMemStStrCopy"
+    },
+    {
+        "skip": true,
+        "code": "55",
+        "name": "CI2Var"
+    },
+    {
+        "skip": true,
+        "code": "56",
+        "name": "NewIfNullAd"
+    },
+    {
+        "skip": true,
+        "code": "57",
+        "name": "LateMemLdVar"
+    },
+    {
+        "skip": true,
+        "code": "58",
+        "name": "MemLdPr"
+    },
+    {
+        "skip": true,
+        "code": "59",
+        "name": "PopTmpLdAdStr"
+    },
+    {
+        "skip": true,
+        "code": "5A",
+        "name": "Erase"
+    },
+    {
+        "skip": true,
+        "code": "5B",
+        "name": "FStAdFuncNoPop"
+    },
+    {
+        "skip": true,
+        "code": "5C",
+        "name": "BranchFVar"
+    },
+    {
+        "skip": true,
+        "code": "5D",
+        "name": "HardType"
+    },
+    {
+        "skip": true,
+        "code": "5E",
+        "name": "Unknown3"
+    },
+    {
+        "skip": true,
+        "code": "5F",
+        "name": "FMemLdPr"
+    },
+    {
+        "skip": true,
+        "code": "60",
+        "name": "CStrVarTmp"
+    },
+    {
+        "skip": true,
+        "code": "61",
+        "name": "LateIdLdVar"
+    },
+    {
+        "skip": true,
+        "code": "62",
+        "name": "IStDarg"
+    },
+    {
+        "skip": true,
+        "code": "63",
+        "name": "LitVar_TRUE"
+    },
+    {
+        "skip": true,
+        "code": "64",
+        "name": "NextI2"
+    },
+    {
+        "skip": true,
+        "code": "65",
+        "name": "NextStepI2"
+    },
+    {
+        "skip": true,
+        "code": "66",
+        "name": "NextI4"
+    },
+    {
+        "skip": true,
+        "code": "67",
+        "name": "NextStepI4"
+    },
+    {
+        "skip": true,
+        "code": "68",
+        "name": "NextStepR4"
+    },
+    {
+        "skip": true,
+        "code": "69",
+        "name": "NextStepR8"
+    },
+    {
+        "skip": true,
+        "code": "6A",
+        "name": "NextStepCy"
+    },
+    {
+        "skip": true,
+        "code": "6B",
+        "name": "FLdI2"
+    },
+    {
+        "skip": true,
+        "code": "6C",
+        "name": "ILdRf"
+    },
+    {
+        "skip": true,
+        "code": "6D",
+        "name": "FLdR8"
+    },
+    {
+        "skip": true,
+        "code": "6E",
+        "name": "FLdFPR4"
+    },
+    {
+        "skip": true,
+        "code": "6F",
+        "name": "FLdFPR8"
+    },
+    {
+        "code": "70",
+        "name": "FStI2",
+        "desc": "Pops an Integer off the stack and stores it within the specified Integer variable.",
+        "args": [
+            {
+                "source": "Variable",
+                "type": "Integer"
+            }
+        ]
+    },
+    {
+        "skip": true,
+        "code": "71",
+        "name": "FStR4"
+    },
+    {
+        "skip": true,
+        "code": "72",
+        "name": "FStR8"
+    },
+    {
+        "skip": true,
+        "code": "73",
+        "name": "FStFPR4"
+    },
+    {
+        "skip": true,
+        "code": "74",
+        "name": "FStFPR8"
+    },
+    {
+        "skip": true,
+        "code": "75",
+        "name": "ImpAdLdI2"
+    },
+    {
+        "skip": true,
+        "code": "76",
+        "name": "ImpAdLdI4"
+    },
+    {
+        "skip": true,
+        "code": "77",
+        "name": "ImpAdLdCy"
+    },
+    {
+        "skip": true,
+        "code": "78",
+        "name": "ImpAdLdFPR4"
+    },
+    {
+        "skip": true,
+        "code": "79",
+        "name": "ImpAdLdFPR8"
+    },
+    {
+        "skip": true,
+        "code": "7A",
+        "name": "ImpAdStI2"
+    },
+    {
+        "skip": true,
+        "code": "7B",
+        "name": "ImpAdStR4"
+    },
+    {
+        "skip": true,
+        "code": "7C",
+        "name": "ImpAdStCy"
+    },
+    {
+        "skip": true,
+        "code": "7D",
+        "name": "ImpAdStFPR4"
+    },
+    {
+        "skip": true,
+        "code": "7E",
+        "name": "ImpAdStFPR8"
+    },
+    {
+        "skip": true,
+        "code": "7F",
+        "name": "ILdI2"
+    },
+    {
+        "skip": true,
+        "code": "80",
+        "name": "ILdI4"
+    },
+    {
+        "skip": true,
+        "code": "81",
+        "name": "ILdR8"
+    },
+    {
+        "skip": true,
+        "code": "82",
+        "name": "ILdFPR4"
+    },
+    {
+        "skip": true,
+        "code": "83",
+        "name": "ILdFPR8"
+    },
+    {
+        "skip": true,
+        "code": "84",
+        "name": "IStI2"
+    },
+    {
+        "skip": true,
+        "code": "85",
+        "name": "IStI4"
+    },
+    {
+        "skip": true,
+        "code": "86",
+        "name": "IStR8"
+    },
+    {
+        "skip": true,
+        "code": "87",
+        "name": "IStFPR4"
+    },
+    {
+        "skip": true,
+        "code": "88",
+        "name": "IStFPR8"
+    },
+    {
+        "skip": true,
+        "code": "89",
+        "name": "MemLdI2"
+    },
+    {
+        "skip": true,
+        "code": "8A",
+        "name": "MemLdStr"
+    },
+    {
+        "skip": true,
+        "code": "8B",
+        "name": "MemLdR8"
+    },
+    {
+        "skip": true,
+        "code": "8C",
+        "name": "MemLdFPR4"
+    },
+    {
+        "skip": true,
+        "code": "8D",
+        "name": "MemLdFPR8"
+    },
+    {
+        "skip": true,
+        "code": "8E",
+        "name": "MemStI2"
+    },
+    {
+        "skip": true,
+        "code": "8F",
+        "name": "MemStI4"
+    },
+    {
+        "skip": true,
+        "code": "90",
+        "name": "MemStR8"
+    },
+    {
+        "skip": true,
+        "code": "91",
+        "name": "MemStFPR4"
+    },
+    {
+        "skip": true,
+        "code": "92",
+        "name": "MemStFPR8"
+    },
+    {
+        "skip": true,
+        "code": "93",
+        "name": "FMemLdI2"
+    },
+    {
+        "skip": true,
+        "code": "94",
+        "name": "FMemLdR4"
+    },
+    {
+        "skip": true,
+        "code": "95",
+        "name": "FMemLdCy"
+    },
+    {
+        "skip": true,
+        "code": "96",
+        "name": "FMemLdFPR4"
+    },
+    {
+        "skip": true,
+        "code": "97",
+        "name": "FMemLdFPR8"
+    },
+    {
+        "skip": true,
+        "code": "98",
+        "name": "FMemStI2"
+    },
+    {
+        "skip": true,
+        "code": "99",
+        "name": "FMemStI4"
+    },
+    {
+        "skip": true,
+        "code": "9A",
+        "name": "FMemStR8"
+    },
+    {
+        "skip": true,
+        "code": "9B",
+        "name": "FMemStFPR4"
+    },
+    {
+        "skip": true,
+        "code": "9C",
+        "name": "FMemStFPR8"
+    },
+    {
+        "skip": true,
+        "code": "9D",
+        "name": "Ary1LdI2"
+    },
+    {
+        "skip": true,
+        "code": "9E",
+        "name": "Ary1LdI4"
+    },
+    {
+        "skip": true,
+        "code": "9F",
+        "name": "Ary1LdCy"
+    },
+    {
+        "skip": true,
+        "code": "A0",
+        "name": "Ary1LdFPR4"
+    },
+    {
+        "skip": true,
+        "code": "A1",
+        "name": "Ary1LdFPR8"
+    },
+    {
+        "skip": true,
+        "code": "A2",
+        "name": "Ary1StI2"
+    },
+    {
+        "skip": true,
+        "code": "A3",
+        "name": "Ary1StI4"
+    },
+    {
+        "skip": true,
+        "code": "A4",
+        "name": "Ary1StCy"
+    },
+    {
+        "skip": true,
+        "code": "A5",
+        "name": "Ary1StFPR4"
+    },
+    {
+        "skip": true,
+        "code": "A6",
+        "name": "Ary1StFPR8"
+    },
+    {
+        "skip": true,
+        "code": "A7",
+        "name": "AryLdPr"
+    },
+    {
+        "skip": true,
+        "code": "A8",
+        "name": "AryLdRf"
+    },
+    {
+        "skip": true,
+        "code": "A9",
+        "name": "AddI2"
+    },
+    {
+        "skip": true,
+        "code": "AA",
+        "name": "AddI4"
+    },
+    {
+        "skip": true,
+        "code": "AB",
+        "name": "AddR8"
+    },
+    {
+        "skip": true,
+        "code": "AC",
+        "name": "AddCy"
+    },
+    {
+        "skip": true,
+        "code": "AD",
+        "name": "SubI2"
+    },
+    {
+        "skip": true,
+        "code": "AE",
+        "name": "SubI4"
+    },
+    {
+        "skip": true,
+        "code": "AF",
+        "name": "SubR4"
+    },
+    {
+        "skip": true,
+        "code": "B0",
+        "name": "SubCy"
+    },
+    {
+        "skip": true,
+        "code": "B1",
+        "name": "MulI2"
+    },
+    {
+        "skip": true,
+        "code": "B2",
+        "name": "MulI4"
+    },
+    {
+        "skip": true,
+        "code": "B3",
+        "name": "MulR8"
+    },
+    {
+        "skip": true,
+        "code": "B4",
+        "name": "MulCy"
+    },
+    {
+        "skip": true,
+        "code": "B5",
+        "name": "MulCyI2"
+    },
+    {
+        "skip": true,
+        "code": "B6",
+        "name": "DivR8"
+    },
+    {
+        "skip": true,
+        "code": "B7",
+        "name": "UMiI2"
+    },
+    {
+        "skip": true,
+        "code": "B8",
+        "name": "UMiI4"
+    },
+    {
+        "skip": true,
+        "code": "B9",
+        "name": "UMiR8"
+    },
+    {
+        "skip": true,
+        "code": "BA",
+        "name": "UMiCy"
+    },
+    {
+        "skip": true,
+        "code": "BB",
+        "name": "FnAbsI2"
+    },
+    {
+        "skip": true,
+        "code": "BC",
+        "name": "FnAbsI4"
+    },
+    {
+        "skip": true,
+        "code": "BD",
+        "name": "FnAbsR4"
+    },
+    {
+        "skip": true,
+        "code": "BE",
+        "name": "FnAbsCy"
+    },
+    {
+        "skip": true,
+        "code": "BF",
+        "name": "IDvI2"
+    },
+    {
+        "skip": true,
+        "code": "C0",
+        "name": "IDvI4"
+    },
+    {
+        "skip": true,
+        "code": "C1",
+        "name": "ModI2"
+    },
+    {
+        "skip": true,
+        "code": "C2",
+        "name": "ModI4"
+    },
+    {
+        "skip": true,
+        "code": "C3",
+        "name": "NotI4"
+    },
+    {
+        "skip": true,
+        "code": "C4",
+        "name": "AndI4"
+    },
+    {
+        "skip": true,
+        "code": "C5",
+        "name": "OrI4"
+    },
+    {
+        "skip": true,
+        "code": "C6",
+        "name": "EqI2"
+    },
+    {
+        "skip": true,
+        "code": "C7",
+        "name": "EqI4"
+    },
+    {
+        "skip": true,
+        "code": "C8",
+        "name": "EqR4"
+    },
+    {
+        "skip": true,
+        "code": "C9",
+        "name": "EqCy"
+    },
+    {
+        "skip": true,
+        "code": "CA",
+        "name": "EqCyR8"
+    },
+    {
+        "skip": true,
+        "code": "CB",
+        "name": "NeI2"
+    },
+    {
+        "skip": true,
+        "code": "CC",
+        "name": "NeI4"
+    },
+    {
+        "skip": true,
+        "code": "CD",
+        "name": "NeR8"
+    },
+    {
+        "skip": true,
+        "code": "CE",
+        "name": "NeCy"
+    },
+    {
+        "skip": true,
+        "code": "CF",
+        "name": "NeCyR8"
+    },
+    {
+        "skip": true,
+        "code": "D0",
+        "name": "LtI2"
+    },
+    {
+        "skip": true,
+        "code": "D1",
+        "name": "LtI4"
+    },
+    {
+        "skip": true,
+        "code": "D2",
+        "name": "LtR8"
+    },
+    {
+        "skip": true,
+        "code": "D3",
+        "name": "LtCy"
+    },
+    {
+        "skip": true,
+        "code": "D4",
+        "name": "LtCyR8"
+    },
+    {
+        "skip": true,
+        "code": "D5",
+        "name": "LeI2"
+    },
+    {
+        "skip": true,
+        "code": "D6",
+        "name": "LeI4"
+    },
+    {
+        "skip": true,
+        "code": "D7",
+        "name": "LeR8"
+    },
+    {
+        "skip": true,
+        "code": "D8",
+        "name": "LeCy"
+    },
+    {
+        "skip": true,
+        "code": "D9",
+        "name": "LeCyR8"
+    },
+    {
+        "skip": true,
+        "code": "DA",
+        "name": "GtI2"
+    },
+    {
+        "skip": true,
+        "code": "DB",
+        "name": "GtI4"
+    },
+    {
+        "skip": true,
+        "code": "DC",
+        "name": "GtR4"
+    },
+    {
+        "skip": true,
+        "code": "DD",
+        "name": "GtCy"
+    },
+    {
+        "skip": true,
+        "code": "DE",
+        "name": "GtCyR8"
+    },
+    {
+        "skip": true,
+        "code": "DF",
+        "name": "GeI2"
+    },
+    {
+        "skip": true,
+        "code": "E0",
+        "name": "GeI4"
+    },
+    {
+        "skip": true,
+        "code": "E1",
+        "name": "GeR8"
+    },
+    {
+        "skip": true,
+        "code": "E2",
+        "name": "GeCy"
+    },
+    {
+        "skip": true,
+        "code": "E3",
+        "name": "GeCyR8"
+    },
+    {
+        "skip": true,
+        "code": "E4",
+        "name": "CI2I4"
+    },
+    {
+        "skip": true,
+        "code": "E5",
+        "name": "CI2R8"
+    },
+    {
+        "skip": true,
+        "code": "E6",
+        "name": "CI2Cy"
+    },
+    {
+        "skip": true,
+        "code": "E7",
+        "name": "CI4UI1"
+    },
+    {
+        "skip": true,
+        "code": "E8",
+        "name": "CI4R8"
+    },
+    {
+        "skip": true,
+        "code": "E9",
+        "name": "CI4Cy"
+    },
+    {
+        "skip": true,
+        "code": "EA",
+        "name": "CR4R4"
+    },
+    {
+        "skip": true,
+        "code": "EB",
+        "name": "CR8I2"
+    },
+    {
+        "skip": true,
+        "code": "EC",
+        "name": "CR8I4"
+    },
+    {
+        "skip": true,
+        "code": "ED",
+        "name": "CR8R8"
+    },
+    {
+        "skip": true,
+        "code": "EE",
+        "name": "CR8Cy"
+    },
+    {
+        "skip": true,
+        "code": "EF",
+        "name": "CCyI2"
+    },
+    {
+        "skip": true,
+        "code": "F0",
+        "name": "CCyI4"
+    },
+    {
+        "skip": true,
+        "code": "F1",
+        "name": "CCyR4"
+    },
+    {
+        "skip": true,
+        "code": "F2",
+        "name": "CDateR8"
+    },
+    {
+        "code": "F3",
+        "name": "LitI2",
+        "desc": "An Integer is pushed to the stack.",
+        "args": [
+            {
+                "source": "Inline",
+                "type": "Integer"
+            }
+        ]
+    },
+    {
+        "code": "F4",
+        "name": "LitI2_Byte",
+        "desc": "An Integer is pushed to the stack from a provided Byte.",
+        "args": [
+            {
+                "source": "Inline",
+                "type": "Byte"
+            }
+        ]
+    },
+    {
+        "code": "F5",
+        "name": "LitI4",
+        "desc": "A Long is pushed to the stack.",
+        "args": [
+            {
+                "source": "Inline",
+                "type": "Long"
+            }
+        ]
+    },
+    {
+        "code": "F6",
+        "name": "LitCy",
+        "desc": "A Currency is pushed to the stack.",
+        "args": [
+            {
+                "source": "Inline",
+                "type": "Currency"
+            }
+        ]
+    },
+    {
+        "skip": true,
+        "code": "F7",
+        "name": "LitCy4"
+    },
+    {
+        "skip": true,
+        "code": "F8",
+        "name": "LitI2FP"
+    },
+    {
+        "skip": true,
+        "code": "F9",
+        "name": "LitR4FP"
+    },
+    {
+        "code": "FA",
+        "name": "LitDate",
+        "desc": "A Date variable is declared and initialized with an Integer which is then placed on the stack.",
+        "args": [
+            {
+                "source": "Inline",
+                "type": "Date"
+            }
+        ]
+    },
+    {
+        "skip": true,
+        "code": "FB01",
+        "name": "ImpUI1"
+    },
+    {
+        "skip": true,
+        "code": "FB02",
+        "name": "ImpI4"
+    },
+    {
+        "skip": true,
+        "code": "FB03",
+        "name": "Unknown4"
+    },
+    {
+        "skip": true,
+        "code": "FB07",
+        "name": "ImpVar"
+    },
+    {
+        "skip": true,
+        "code": "FB09",
+        "name": "EqvUI1"
+    },
+    {
+        "skip": true,
+        "code": "FB0A",
+        "name": "EqvI4"
+    },
+    {
+        "skip": true,
+        "code": "FB0B",
+        "name": "Unknown5"
+    },
+    {
+        "skip": true,
+        "code": "FB0F",
+        "name": "EqvVar"
+    },
+    {
+        "skip": true,
+        "code": "FB11",
+        "name": "XorI4"
+    },
+    {
+        "skip": true,
+        "code": "FB12",
+        "name": "Unknown6"
+    },
+    {
+        "skip": true,
+        "code": "FB13",
+        "name": "Unknown7"
+    },
+    {
+        "skip": true,
+        "code": "FB17",
+        "name": "XorVar"
+    },
+    {
+        "skip": true,
+        "code": "FB19",
+        "name": "OrI2"
+    },
+    {
+        "skip": true,
+        "code": "FB1A",
+        "name": "Unknown8"
+    },
+    {
+        "skip": true,
+        "code": "FB1B",
+        "name": "Unknown9"
+    },
+    {
+        "skip": true,
+        "code": "FB1F",
+        "name": "OrVar"
+    },
+    {
+        "skip": true,
+        "code": "FB21",
+        "name": "AndUI1"
+    },
+    {
+        "skip": true,
+        "code": "FB22",
+        "name": "Unknown10"
+    },
+    {
+        "skip": true,
+        "code": "FB23",
+        "name": "Unknown11"
+    },
+    {
+        "skip": true,
+        "code": "FB27",
+        "name": "AndVar"
+    },
+    {
+        "skip": true,
+        "code": "FB29",
+        "name": "EqI2"
+    },
+    {
+        "skip": true,
+        "code": "FB2A",
+        "name": "EqI2"
+    },
+    {
+        "skip": true,
+        "code": "FB2B",
+        "name": "EqI4"
+    },
+    {
+        "skip": true,
+        "code": "FB2C",
+        "name": "EqR8"
+    },
+    {
+        "skip": true,
+        "code": "FB2D",
+        "name": "EqR8"
+    },
+    {
+        "skip": true,
+        "code": "FB2E",
+        "name": "EqCy"
+    },
+    {
+        "skip": true,
+        "code": "FB2F",
+        "name": "EqVar"
+    },
+    {
+        "skip": true,
+        "code": "FB30",
+        "name": "EqStr"
+    },
+    {
+        "skip": true,
+        "code": "FB31",
+        "name": "EqTextVar"
+    },
+    {
+        "skip": true,
+        "code": "FB32",
+        "name": "EqTextStr"
+    },
+    {
+        "skip": true,
+        "code": "FB33",
+        "name": "EqVarBool"
+    },
+    {
+        "skip": true,
+        "code": "FB34",
+        "name": "EqTextVarBool"
+    },
+    {
+        "skip": true,
+        "code": "FB35",
+        "name": "EqCyR8"
+    },
+    {
+        "skip": true,
+        "code": "FB36",
+        "name": "NeUI1"
+    },
+    {
+        "skip": true,
+        "code": "FB37",
+        "name": "NeUI1"
+    },
+    {
+        "skip": true,
+        "code": "FB38",
+        "name": "Unknown12"
+    },
+    {
+        "skip": true,
+        "code": "FB39",
+        "name": "NeR4"
+    },
+    {
+        "skip": true,
+        "code": "FB3A",
+        "name": "NeR4"
+    },
+    {
+        "skip": true,
+        "code": "FB3B",
+        "name": "NeCy"
+    },
+    {
+        "skip": true,
+        "code": "FB3C",
+        "name": "NeVar"
+    },
+    {
+        "skip": true,
+        "code": "FB3D",
+        "name": "NeStr"
+    },
+    {
+        "skip": true,
+        "code": "FB3E",
+        "name": "NeTextVar"
+    },
+    {
+        "skip": true,
+        "code": "FB3F",
+        "name": "NeTextStr"
+    },
+    {
+        "skip": true,
+        "code": "FB40",
+        "name": "NeVarBool"
+    },
+    {
+        "skip": true,
+        "code": "FB41",
+        "name": "NeTextVarBool"
+    },
+    {
+        "skip": true,
+        "code": "FB42",
+        "name": "NeCyR8"
+    },
+    {
+        "skip": true,
+        "code": "FB43",
+        "name": "LeUI1"
+    },
+    {
+        "skip": true,
+        "code": "FB44",
+        "name": "LeI2"
+    },
+    {
+        "skip": true,
+        "code": "FB45",
+        "name": "Unknown13"
+    },
+    {
+        "skip": true,
+        "code": "FB46",
+        "name": "LeR4"
+    },
+    {
+        "skip": true,
+        "code": "FB47",
+        "name": "LeR4"
+    },
+    {
+        "skip": true,
+        "code": "FB48",
+        "name": "LeCy"
+    },
+    {
+        "skip": true,
+        "code": "FB49",
+        "name": "LeVar"
+    },
+    {
+        "skip": true,
+        "code": "FB4A",
+        "name": "LeStr"
+    },
+    {
+        "skip": true,
+        "code": "FB4B",
+        "name": "LeTextVar"
+    },
+    {
+        "skip": true,
+        "code": "FB4C",
+        "name": "LeTextStr"
+    },
+    {
+        "skip": true,
+        "code": "FB4D",
+        "name": "LeVarBool"
+    },
+    {
+        "skip": true,
+        "code": "FB4E",
+        "name": "LeTextVarBool"
+    },
+    {
+        "skip": true,
+        "code": "FB4F",
+        "name": "LeCyR8"
+    },
+    {
+        "skip": true,
+        "code": "FB50",
+        "name": "GeUI1"
+    },
+    {
+        "skip": true,
+        "code": "FB51",
+        "name": "GeI2"
+    },
+    {
+        "skip": true,
+        "code": "FB52",
+        "name": "Unknown14"
+    },
+    {
+        "skip": true,
+        "code": "FB53",
+        "name": "GeR4"
+    },
+    {
+        "skip": true,
+        "code": "FB54",
+        "name": "GeR4"
+    },
+    {
+        "skip": true,
+        "code": "FB55",
+        "name": "GeCy"
+    },
+    {
+        "skip": true,
+        "code": "FB56",
+        "name": "GeVar"
+    },
+    {
+        "skip": true,
+        "code": "FB57",
+        "name": "GeStr"
+    },
+    {
+        "skip": true,
+        "code": "FB58",
+        "name": "GeTextVar"
+    },
+    {
+        "skip": true,
+        "code": "FB59",
+        "name": "GeTextStr"
+    },
+    {
+        "skip": true,
+        "code": "FB5A",
+        "name": "GeVarBool"
+    },
+    {
+        "skip": true,
+        "code": "FB5B",
+        "name": "GeTextVarBool"
+    },
+    {
+        "skip": true,
+        "code": "FB5C",
+        "name": "GeCyR8"
+    },
+    {
+        "skip": true,
+        "code": "FB5D",
+        "name": "LtUI1"
+    },
+    {
+        "skip": true,
+        "code": "FB5E",
+        "name": "LtI2"
+    },
+    {
+        "skip": true,
+        "code": "FB5F",
+        "name": "LtI4"
+    },
+    {
+        "skip": true,
+        "code": "FB60",
+        "name": "LtR4"
+    },
+    {
+        "skip": true,
+        "code": "FB61",
+        "name": "LtR4"
+    },
+    {
+        "skip": true,
+        "code": "FB62",
+        "name": "LtCy"
+    },
+    {
+        "skip": true,
+        "code": "FB63",
+        "name": "LtVar"
+    },
+    {
+        "skip": true,
+        "code": "FB64",
+        "name": "LtStr"
+    },
+    {
+        "skip": true,
+        "code": "FB65",
+        "name": "LtTextVar"
+    },
+    {
+        "skip": true,
+        "code": "FB66",
+        "name": "LtTextStr"
+    },
+    {
+        "skip": true,
+        "code": "FB67",
+        "name": "LtVarBool"
+    },
+    {
+        "skip": true,
+        "code": "FB68",
+        "name": "LtTextVarBool"
+    },
+    {
+        "skip": true,
+        "code": "FB69",
+        "name": "LtCyR8"
+    },
+    {
+        "skip": true,
+        "code": "FB6A",
+        "name": "GtUI1"
+    },
+    {
+        "skip": true,
+        "code": "FB6B",
+        "name": "GtI2"
+    },
+    {
+        "skip": true,
+        "code": "FB6C",
+        "name": "Unknown15"
+    },
+    {
+        "skip": true,
+        "code": "FB6D",
+        "name": "GtR4"
+    },
+    {
+        "skip": true,
+        "code": "FB6E",
+        "name": "GtR4"
+    },
+    {
+        "skip": true,
+        "code": "FB6F",
+        "name": "GtCy"
+    },
+    {
+        "skip": true,
+        "code": "FB70",
+        "name": "GtVar"
+    },
+    {
+        "skip": true,
+        "code": "FB71",
+        "name": "GtStr"
+    },
+    {
+        "skip": true,
+        "code": "FB72",
+        "name": "GtTextVar"
+    },
+    {
+        "skip": true,
+        "code": "FB73",
+        "name": "GtTextStr"
+    },
+    {
+        "skip": true,
+        "code": "FB74",
+        "name": "GtVarBool"
+    },
+    {
+        "skip": true,
+        "code": "FB75",
+        "name": "GtTextVarBool"
+    },
+    {
+        "skip": true,
+        "code": "FB76",
+        "name": "GtCyR8"
+    },
+    {
+        "skip": true,
+        "code": "FB7D",
+        "name": "LikeVar"
+    },
+    {
+        "skip": true,
+        "code": "FB7E",
+        "name": "LikeStr"
+    },
+    {
+        "skip": true,
+        "code": "FB7F",
+        "name": "LikeTextVar"
+    },
+    {
+        "skip": true,
+        "code": "FB80",
+        "name": "LikeTextStr"
+    },
+    {
+        "skip": true,
+        "code": "FB81",
+        "name": "LikeVarBool"
+    },
+    {
+        "skip": true,
+        "code": "FB82",
+        "name": "LikeTextVarBool"
+    },
+    {
+        "skip": true,
+        "code": "FB84",
+        "name": "BetweenUI1"
+    },
+    {
+        "skip": true,
+        "code": "FB85",
+        "name": "BetweenI2"
+    },
+    {
+        "skip": true,
+        "code": "FB86",
+        "name": "BetweenI4"
+    },
+    {
+        "skip": true,
+        "code": "FB87",
+        "name": "BetweenR4"
+    },
+    {
+        "skip": true,
+        "code": "FB88",
+        "name": "BetweenR4"
+    },
+    {
+        "skip": true,
+        "code": "FB89",
+        "name": "BetweenCy"
+    },
+    {
+        "skip": true,
+        "code": "FB8A",
+        "name": "BetweenVar"
+    },
+    {
+        "skip": true,
+        "code": "FB8B",
+        "name": "BetweenStr"
+    },
+    {
+        "skip": true,
+        "code": "FB8C",
+        "name": "BetweenTextVar"
+    },
+    {
+        "skip": true,
+        "code": "FB8D",
+        "name": "BetweenTextStr"
+    },
+    {
+        "skip": true,
+        "code": "FB8E",
+        "name": "AddUI1"
+    },
+    {
+        "skip": true,
+        "code": "FB8F",
+        "name": "AddI2"
+    },
+    {
+        "skip": true,
+        "code": "FB90",
+        "name": "Unknown16"
+    },
+    {
+        "skip": true,
+        "code": "FB91",
+        "name": "AddR4"
+    },
+    {
+        "skip": true,
+        "code": "FB92",
+        "name": "AddR4"
+    },
+    {
+        "skip": true,
+        "code": "FB93",
+        "name": "AddCy"
+    },
+    {
+        "skip": true,
+        "code": "FB94",
+        "name": "AddVar"
+    },
+    {
+        "skip": true,
+        "code": "FB96",
+        "name": "SubUI1"
+    },
+    {
+        "skip": true,
+        "code": "FB97",
+        "name": "Unknown17"
+    },
+    {
+        "skip": true,
+        "code": "FB98",
+        "name": "Unknown18"
+    },
+    {
+        "skip": true,
+        "code": "FB99",
+        "name": "Unknown19"
+    },
+    {
+        "skip": true,
+        "code": "FB9A",
+        "name": "Unknown20"
+    },
+    {
+        "skip": true,
+        "code": "FB9B",
+        "name": "Unknown21"
+    },
+    {
+        "skip": true,
+        "code": "FB9C",
+        "name": "SubVar"
+    },
+    {
+        "skip": true,
+        "code": "FB9E",
+        "name": "ModUI1"
+    },
+    {
+        "skip": true,
+        "code": "FB9F",
+        "name": "Unknown22"
+    },
+    {
+        "skip": true,
+        "code": "FBA0",
+        "name": "Unknown23"
+    },
+    {
+        "skip": true,
+        "code": "FBA4",
+        "name": "ModVar"
+    },
+    {
+        "skip": true,
+        "code": "FBA6",
+        "name": "IDvUI1"
+    },
+    {
+        "skip": true,
+        "code": "FBA7",
+        "name": "Unknown24"
+    },
+    {
+        "skip": true,
+        "code": "FBA8",
+        "name": "Unknown25"
+    },
+    {
+        "skip": true,
+        "code": "FBAC",
+        "name": "IDvVar"
+    },
+    {
+        "skip": true,
+        "code": "FBAE",
+        "name": "MulUI1"
+    },
+    {
+        "skip": true,
+        "code": "FBAF",
+        "name": "Unknown26"
+    },
+    {
+        "skip": true,
+        "code": "FBB0",
+        "name": "Unknown27"
+    },
+    {
+        "skip": true,
+        "code": "FBB1",
+        "name": "MulR4"
+    },
+    {
+        "skip": true,
+        "code": "FBB2",
+        "name": "Unknown28"
+    },
+    {
+        "skip": true,
+        "code": "FBB3",
+        "name": "Unknown29"
+    },
+    {
+        "skip": true,
+        "code": "FBB4",
+        "name": "MulVar"
+    },
+    {
+        "skip": true,
+        "code": "FBB9",
+        "name": "Unknown30"
+    },
+    {
+        "skip": true,
+        "code": "FBBA",
+        "name": "Unknown31"
+    },
+    {
+        "skip": true,
+        "code": "FBBC",
+        "name": "DivVar"
+    },
+    {
+        "skip": true,
+        "code": "FBBE",
+        "name": "NotUI1"
+    },
+    {
+        "skip": true,
+        "code": "FBBF",
+        "name": "Unknown32"
+    },
+    {
+        "skip": true,
+        "code": "FBC0",
+        "name": "Unknown33"
+    },
+    {
+        "skip": true,
+        "code": "FBC4",
+        "name": "NotVar"
+    },
+    {
+        "skip": true,
+        "code": "FBC7",
+        "name": "UMiI2"
+    },
+    {
+        "skip": true,
+        "code": "FBC8",
+        "name": "UMiI2"
+    },
+    {
+        "skip": true,
+        "code": "FBC9",
+        "name": "UMiR4"
+    },
+    {
+        "skip": true,
+        "code": "FBCA",
+        "name": "UMiR4"
+    },
+    {
+        "skip": true,
+        "code": "FBCB",
+        "name": "UMiCy"
+    },
+    {
+        "skip": true,
+        "code": "FBCC",
+        "name": "UMiVar"
+    },
+    {
+        "skip": true,
+        "code": "FBCE",
+        "name": "PwrVar"
+    },
+    {
+        "skip": true,
+        "code": "FBCF",
+        "name": "PwrR8R8"
+    },
+    {
+        "skip": true,
+        "code": "FBD0",
+        "name": "PwrR8I2"
+    },
+    {
+        "skip": true,
+        "code": "FBD1",
+        "name": "MulCyI2"
+    },
+    {
+        "skip": true,
+        "code": "FBD2",
+        "name": "Is"
+    },
+    {
+        "skip": true,
+        "code": "FBD4",
+        "name": "FnAbsI2"
+    },
+    {
+        "skip": true,
+        "code": "FBD5",
+        "name": "FnAbsI4"
+    },
+    {
+        "skip": true,
+        "code": "FBD6",
+        "name": "FnAbsR4"
+    },
+    {
+        "skip": true,
+        "code": "FBD7",
+        "name": "FnAbsR4"
+    },
+    {
+        "skip": true,
+        "code": "FBD8",
+        "name": "FnAbsCy"
+    },
+    {
+        "skip": true,
+        "code": "FBD9",
+        "name": "FnAbsVar"
+    },
+    {
+        "skip": true,
+        "code": "FBDE",
+        "name": "FnFixR8"
+    },
+    {
+        "skip": true,
+        "code": "FBDF",
+        "name": "FnFixR8"
+    },
+    {
+        "skip": true,
+        "code": "FBE0",
+        "name": "FnFixCy"
+    },
+    {
+        "skip": true,
+        "code": "FBE1",
+        "name": "FnFixVar"
+    },
+    {
+        "skip": true,
+        "code": "FBE6",
+        "name": "FnIntR8"
+    },
+    {
+        "skip": true,
+        "code": "FBE7",
+        "name": "FnIntR8"
+    },
+    {
+        "skip": true,
+        "code": "FBE8",
+        "name": "FnIntCy"
+    },
+    {
+        "skip": true,
+        "code": "FBE9",
+        "name": "FnIntVar"
+    },
+    {
+        "skip": true,
+        "code": "FBEB",
+        "name": "FnLenVar"
+    },
+    {
+        "skip": true,
+        "code": "FBEC",
+        "name": "FnLenStr"
+    },
+    {
+        "skip": true,
+        "code": "FBED",
+        "name": "FnLenBVar"
+    },
+    {
+        "skip": true,
+        "code": "FBEE",
+        "name": "FnLenBStr"
+    },
+    {
+        "skip": true,
+        "code": "FBEF",
+        "name": "ConcatVar"
+    },
+    {
+        "skip": true,
+        "code": "FBF0",
+        "name": "Unknown34"
+    },
+    {
+        "skip": true,
+        "code": "FBF2",
+        "name": "FnSgnUI1"
+    },
+    {
+        "skip": true,
+        "code": "FBF3",
+        "name": "FnSgnUI1"
+    },
+    {
+        "skip": true,
+        "code": "FBF4",
+        "name": "FnSgnI4"
+    },
+    {
+        "skip": true,
+        "code": "FBF5",
+        "name": "FnSgnR8"
+    },
+    {
+        "skip": true,
+        "code": "FBF6",
+        "name": "FnSgnR4"
+    },
+    {
+        "skip": true,
+        "code": "FBF7",
+        "name": "FnSgnCy"
+    },
+    {
+        "skip": true,
+        "code": "FBFA",
+        "name": "SeekFile"
+    },
+    {
+        "skip": true,
+        "code": "FBFB",
+        "name": "NameFile"
+    },
+    {
+        "skip": true,
+        "code": "FBFC",
+        "name": "CStrI2"
+    },
+    {
+        "skip": true,
+        "code": "FBFD",
+        "name": "CStrUI1"
+    },
+    {
+        "skip": true,
+        "code": "FBFE",
+        "name": "CStrI4"
+    },
+    {
+        "skip": true,
+        "code": "FBFF",
+        "name": "CStrR4"
+    },
+    {
+        "skip": true,
+        "code": "FC00",
+        "name": "CStrR8"
+    },
+    {
+        "skip": true,
+        "code": "FC01",
+        "name": "CStrCy"
+    },
+    {
+        "skip": true,
+        "code": "FC02",
+        "name": "CStrVar"
+    },
+    {
+        "skip": true,
+        "code": "FC04",
+        "name": "Unknown35"
+    },
+    {
+        "skip": true,
+        "code": "FC05",
+        "name": "Unknown36"
+    },
+    {
+        "skip": true,
+        "code": "FC06",
+        "name": "CCyI4"
+    },
+    {
+        "skip": true,
+        "code": "FC07",
+        "name": "CCyR4"
+    },
+    {
+        "skip": true,
+        "code": "FC08",
+        "name": "CCyR4"
+    },
+    {
+        "skip": true,
+        "code": "FC0A",
+        "name": "CCyVar"
+    },
+    {
+        "skip": true,
+        "code": "FC0B",
+        "name": "CCyStr"
+    },
+    {
+        "code": "FC0D",
+        "name": "CUI1I2",
+        "desc": "Pops an Integer value off the stack and converts it to a Byte value.",
+        "args": []
+    },
+    {
+        "code": "FC0E",
+        "name": "CUI1I4",
+        "desc": "Pops a Long value off the stack and converts it to a Byte value.",
+        "args": []
+    },
+    {
+        "code": "FC0F",
+        "name": "CUI1R4",
+        "desc": "Pops a Single value off the stack and converts it to a Byte value.",
+        "args": []
+    },
+    {
+        "code": "FC10",
+        "name": "CUI1R8",
+        "desc": "Pops a Double value off the stack and converts it to a Byte value.",
+        "args": []
+    },
+    {
+        "code": "FC11",
+        "name": "CUI1Cy",
+        "desc": "Pops a Currency value off the stack and converts it to a Byte value.",
+        "args": []
+    },
+    {
+        "code": "FC12",
+        "name": "CUI1Var",
+        "desc": "Pops a Variant value off the stack and converts it to a Byte value.",
+        "args": []
+    },
+    {
+        "code": "FC13",
+        "name": "CUI1Str",
+        "desc": "Pops a String value off the stack and converts it to a Byte value.",
+        "args": []
+    },
+    {
+        "code": "FC14",
+        "name": "CI2UI1",
+        "desc": "Pops a Byte value off the stack and converts it to an Integer value.",
+        "args": []
+    },
+    {
+        "code": "FC16",
+        "name": "CI2I4",
+        "desc": "Pops a Long value off the stack and converts it to an Integer value.",
+        "args": []
+    },
+    {
+        "code": "FC17",
+        "name": "CI2R4",
+        "desc": "Pops a Single value off the stack and converts it to an Integer value.",
+        "args": []
+    },
+    {
+        "code": "FC18",
+        "name": "CI2R8",
+        "desc": "Pops a Double value off the stack and converts it to an Integer value.",
+        "args": []
+    },
+    {
+        "code": "FC19",
+        "name": "CI2Cy",
+        "desc": "Pops a Currency value off the stack and converts it to an Integer value.",
+        "args": []
+    },
+    {
+        "code": "FC1A",
+        "name": "CI2Var",
+        "desc": "Pops a Variant value off the stack and converts it to an Integer value.",
+        "args": []
+    },
+    {
+        "code": "FC1B",
+        "name": "CI2Str",
+        "desc": "Pops a String value off the stack and converts it to an Integer value.",
+        "args": []
+    },
+    {
+        "code": "FC1C",
+        "name": "CI4UI1",
+        "desc": "Pops a Byte value off the stack and converts it to an Long value.",
+        "args": []
+    },
+    {
+        "skip":  true,
+        "code": "FC1D",
+        "name": "CI4UI1",
+        "desc": "Pops a Byte value off the stack and converts it to an Long value.",
+        "args": []
+    },
+    {
+        "code": "FC1F",
+        "name": "CI4R4",
+        "desc": "Pops a Single value off the stack and converts it to an Long value.",
+        "args": []
+    },
+    {
+        "code": "FC20",
+        "name": "CI4R8",
+        "desc": "Pops a Double value off the stack and converts it to an Long value.",
+        "args": []
+    },
+    {
+        "code": "FC21",
+        "name": "CI4Cy",
+        "desc": "Pops a Currency value off the stack and converts it to an Long value.",
+        "args": []
+    },
+    {
+        "code": "FC22",
+        "name": "CI4Var",
+        "desc": "Pops a Variant value off the stack and converts it to an Long value.",
+        "args": []
+    },
+    {
+        "code": "FC23",
+        "name": "CI4Str",
+        "desc": "Pops a String value off the stack and converts it to an Long value.",
+        "args": []
+    },
+    {
+        "skip": true,
+        "code": "FC24",
+        "name": "FnCSngI2"
+    },
+    {
+        "skip": true,
+        "code": "FC25",
+        "name": "FnCSngI2"
+    },
+    {
+        "skip": true,
+        "code": "FC26",
+        "name": "CR4I4"
+    },
+    {
+        "skip": true,
+        "code": "FC27",
+        "name": "CR4R8"
+    },
+    {
+        "skip": true,
+        "code": "FC28",
+        "name": "CR4R8"
+    },
+    {
+        "skip": true,
+        "code": "FC29",
+        "name": "CR8Cy"
+    },
+    {
+        "skip": true,
+        "code": "FC2A",
+        "name": "CR8Var"
+    },
+    {
+        "skip": true,
+        "code": "FC2B",
+        "name": "CR4Str"
+    },
+    {
+        "skip": true,
+        "code": "FC2C",
+        "name": "FnCSngI2"
+    },
+    {
+        "skip": true,
+        "code": "FC2D",
+        "name": "FnCSngI2"
+    },
+    {
+        "skip": true,
+        "code": "FC2E",
+        "name": "CR4I4"
+    },
+    {
+        "skip": true,
+        "code": "FC2F",
+        "name": "CR8R4"
+    },
+    {
+        "skip": true,
+        "code": "FC30",
+        "name": "CR8R4"
+    },
+    {
+        "skip": true,
+        "code": "FC31",
+        "name": "CR8Cy"
+    },
+    {
+        "skip": true,
+        "code": "FC32",
+        "name": "CR8Var"
+    },
+    {
+        "skip": true,
+        "code": "FC33",
+        "name": "CR8Str"
+    },
+    {
+        "skip": true,
+        "code": "FC34",
+        "name": "CAdVar"
+    },
+    {
+        "skip": true,
+        "code": "FC35",
+        "name": "CRefVarAry"
+    },
+    {
+        "skip": true,
+        "code": "FC38",
+        "name": "CUI1Bool"
+    },
+    {
+        "skip": true,
+        "code": "FC39",
+        "name": "FnCDblCy"
+    },
+    {
+        "skip": true,
+        "code": "FC3A",
+        "name": "FnCDblR8"
+    },
+    {
+        "skip": true,
+        "code": "FC3B",
+        "name": "FnCDblR8"
+    },
+    {
+        "skip": true,
+        "code": "FC3C",
+        "name": "FnCSngI2"
+    },
+    {
+        "skip": true,
+        "code": "FC3D",
+        "name": "FnCSngI2"
+    },
+    {
+        "skip": true,
+        "code": "FC3E",
+        "name": "FnCSngI4"
+    },
+    {
+        "skip": true,
+        "code": "FC3F",
+        "name": "CSng"
+    },
+    {
+        "skip": true,
+        "code": "FC40",
+        "name": "CSng"
+    },
+    {
+        "skip": true,
+        "code": "FC41",
+        "name": "FnCSngCy"
+    },
+    {
+        "skip": true,
+        "code": "FC42",
+        "name": "FnCSngVar"
+    },
+    {
+        "skip": true,
+        "code": "FC43",
+        "name": "FnCSngStr"
+    },
+    {
+        "skip": true,
+        "code": "FC44",
+        "name": "FnCByteVar"
+    },
+    {
+        "skip": true,
+        "code": "FC45",
+        "name": "FnCIntVar"
+    },
+    {
+        "skip": true,
+        "code": "FC46",
+        "name": "FnCLngVar"
+    },
+    {
+        "skip": true,
+        "code": "FC47",
+        "name": "CDateR8"
+    },
+    {
+        "skip": true,
+        "code": "FC48",
+        "name": "FnCDblVar"
+    },
+    {
+        "skip": true,
+        "code": "FC49",
+        "name": "FnCCurVar"
+    },
+    {
+        "skip": true,
+        "code": "FC4B",
+        "name": "FnCStrVar"
+    },
+    {
+        "skip": true,
+        "code": "FC4D",
+        "name": "FnCBoolVar"
+    },
+    {
+        "skip": true,
+        "code": "FC4E",
+        "name": "FnCDateVar"
+    },
+    {
+        "skip": true,
+        "code": "FC4F",
+        "name": "FnCDateVar"
+    },
+    {
+        "skip": true,
+        "code": "FC50",
+        "name": "CBoolUI1"
+    },
+    {
+        "skip": true,
+        "code": "FC51",
+        "name": "CBoolUI1"
+    },
+    {
+        "skip": true,
+        "code": "FC52",
+        "name": "CBoolI4"
+    },
+    {
+        "skip": true,
+        "code": "FC53",
+        "name": "CBoolR4"
+    },
+    {
+        "skip": true,
+        "code": "FC54",
+        "name": "CBoolR4"
+    },
+    {
+        "skip": true,
+        "code": "FC55",
+        "name": "CBoolCy"
+    },
+    {
+        "skip": true,
+        "code": "FC56",
+        "name": "CBoolVar"
+    },
+    {
+        "skip": true,
+        "code": "FC57",
+        "name": "CBoolStr"
+    },
+    {
+        "skip": true,
+        "code": "FC58",
+        "name": "CStr2Uni"
+    },
+    {
+        "skip": true,
+        "code": "FC59",
+        "name": "CStrAry2Uni"
+    },
+    {
+        "skip": true,
+        "code": "FC5A",
+        "name": "CStr2Ansi"
+    },
+    {
+        "skip": true,
+        "code": "FC5B",
+        "name": "CStrAry2Ansi"
+    },
+    {
+        "skip": true,
+        "code": "FC5C",
+        "name": "PopAdLd4"
+    },
+    {
+        "skip": true,
+        "code": "FC5D",
+        "name": "CRecAnsi2Uni"
+    },
+    {
+        "skip": true,
+        "code": "FC5E",
+        "name": "CRecUni2Ansi"
+    },
+    {
+        "skip": true,
+        "code": "FC5F",
+        "name": "CStr2Vec"
+    },
+    {
+        "skip": true,
+        "code": "FC60",
+        "name": "CVar2Vec"
+    },
+    {
+        "skip": true,
+        "code": "FC61",
+        "name": "CVec2Var"
+    },
+    {
+        "skip": true,
+        "code": "FC62",
+        "name": "GetLastError"
+    },
+    {
+        "skip": true,
+        "code": "FC63",
+        "name": "LitNothing"
+    },
+    {
+        "skip": true,
+        "code": "FC64",
+        "name": "LitVar_NULL"
+    },
+    {
+        "skip": true,
+        "code": "FC65",
+        "name": "LitVar_TRUE"
+    },
+    {
+        "skip": true,
+        "code": "FC66",
+        "name": "LitVar_FALSE"
+    },
+    {
+        "skip": true,
+        "code": "FC67",
+        "name": "LitVar_Empty"
+    },
+    {
+        "skip": true,
+        "code": "FC68",
+        "name": "Unknown37"
+    },
+    {
+        "skip": true,
+        "code": "FC69",
+        "name": "Unknown38"
+    },
+    {
+        "skip": true,
+        "code": "FC6A",
+        "name": "ThisVCallHresult"
+    },
+    {
+        "skip": true,
+        "code": "FC6D",
+        "name": "Unknown39"
+    },
+    {
+        "skip": true,
+        "code": "FC6F",
+        "name": "CheckTypeVar"
+    },
+    {
+        "skip": true,
+        "code": "FC71",
+        "name": "CUnkVar"
+    },
+    {
+        "skip": true,
+        "code": "FC72",
+        "name": "CVarUnk"
+    },
+    {
+        "skip": true,
+        "code": "FC73",
+        "name": "LdPrUnkVar"
+    },
+    {
+        "skip": true,
+        "code": "FC74",
+        "name": "FLdLateIdUnkVar"
+    },
+    {
+        "skip": true,
+        "code": "FC75",
+        "name": "GetRec3"
+    },
+    {
+        "skip": true,
+        "code": "FC76",
+        "name": "GetRec4"
+    },
+    {
+        "skip": true,
+        "code": "FC77",
+        "name": "PutRec3"
+    },
+    {
+        "skip": true,
+        "code": "FC78",
+        "name": "PutRec4"
+    },
+    {
+        "skip": true,
+        "code": "FC79",
+        "name": "GetRecOwner3"
+    },
+    {
+        "skip": true,
+        "code": "FC7A",
+        "name": "GetRecOwner4"
+    },
+    {
+        "skip": true,
+        "code": "FC7B",
+        "name": "PutRecOwner3"
+    },
+    {
+        "skip": true,
+        "code": "FC7C",
+        "name": "PutRecOwner4"
+    },
+    {
+        "skip": true,
+        "code": "FC7D",
+        "name": "Input"
+    },
+    {
+        "skip": true,
+        "code": "FC7E",
+        "name": "InputDone"
+    },
+    {
+        "skip": true,
+        "code": "FC7F",
+        "name": "InputItemUI1"
+    },
+    {
+        "skip": true,
+        "code": "FC80",
+        "name": "InputItemI2"
+    },
+    {
+        "skip": true,
+        "code": "FC81",
+        "name": "InputItemI4"
+    },
+    {
+        "skip": true,
+        "code": "FC82",
+        "name": "InputItemR4"
+    },
+    {
+        "skip": true,
+        "code": "FC83",
+        "name": "InputItemR8"
+    },
+    {
+        "skip": true,
+        "code": "FC84",
+        "name": "InputItemCy"
+    },
+    {
+        "skip": true,
+        "code": "FC85",
+        "name": "InputItemVar"
+    },
+    {
+        "skip": true,
+        "code": "FC86",
+        "name": "InputItemStr"
+    },
+    {
+        "skip": true,
+        "code": "FC87",
+        "name": "InputItemBool"
+    },
+    {
+        "skip": true,
+        "code": "FC88",
+        "name": "InputItemDate"
+    },
+    {
+        "skip": true,
+        "code": "FC89",
+        "name": "PopFPR4"
+    },
+    {
+        "skip": true,
+        "code": "FC8A",
+        "name": "PopFPR8"
+    },
+    {
+        "skip": true,
+        "code": "FC8B",
+        "name": "PopAd"
+    },
+    {
+        "skip": true,
+        "code": "FC8C",
+        "name": "Unknown40"
+    },
+    {
+        "skip": true,
+        "code": "FC8D",
+        "name": "AryLdPr"
+    },
+    {
+        "skip": true,
+        "code": "FC8E",
+        "name": "AryLdRf"
+    },
+    {
+        "skip": true,
+        "code": "FC8F",
+        "name": "ParmAry1St"
+    },
+    {
+        "skip": true,
+        "code": "FC90",
+        "name": "Ary1LdUI1"
+    },
+    {
+        "skip": true,
+        "code": "FC91",
+        "name": "Ary1LdI2"
+    },
+    {
+        "skip": true,
+        "code": "FC92",
+        "name": "Unknown41"
+    },
+    {
+        "skip": true,
+        "code": "FC93",
+        "name": "Unknown42"
+    },
+    {
+        "skip": true,
+        "code": "FC94",
+        "name": "Ary1LdR8"
+    },
+    {
+        "skip": true,
+        "code": "FC95",
+        "name": "Ary1LdR8"
+    },
+    {
+        "skip": true,
+        "code": "FC96",
+        "name": "Ary1LdRfVar"
+    },
+    {
+        "skip": true,
+        "code": "FC97",
+        "name": "Unknown43"
+    },
+    {
+        "skip": true,
+        "code": "FC98",
+        "name": "Unknown44"
+    },
+    {
+        "skip": true,
+        "code": "FC99",
+        "name": "Ary1LdFPR4"
+    },
+    {
+        "skip": true,
+        "code": "FC9A",
+        "name": "Ary1LdFPR8"
+    },
+    {
+        "skip": true,
+        "code": "FC9B",
+        "name": "Ary1LdPr"
+    },
+    {
+        "skip": true,
+        "code": "FC9C",
+        "name": "Ary1LdRf"
+    },
+    {
+        "skip": true,
+        "code": "FC9D",
+        "name": "Ary1LdVar"
+    },
+    {
+        "skip": true,
+        "code": "FCA0",
+        "name": "Ary1StUI1"
+    },
+    {
+        "skip": true,
+        "code": "FCA1",
+        "name": "Ary1StI2"
+    },
+    {
+        "skip": true,
+        "code": "FCA2",
+        "name": "Ary1StR4"
+    },
+    {
+        "skip": true,
+        "code": "FCA3",
+        "name": "Ary1StR4"
+    },
+    {
+        "skip": true,
+        "code": "FCA4",
+        "name": "Ary1StCy"
+    },
+    {
+        "skip": true,
+        "code": "FCA5",
+        "name": "Ary1StCy"
+    },
+    {
+        "skip": true,
+        "code": "FCA6",
+        "name": "Ary1StVar"
+    },
+    {
+        "skip": true,
+        "code": "FCA7",
+        "name": "Ary1StStr"
+    },
+    {
+        "skip": true,
+        "code": "FCA8",
+        "name": "Ary1StAd"
+    },
+    {
+        "skip": true,
+        "code": "FCA9",
+        "name": "Ary1StFPR4"
+    },
+    {
+        "skip": true,
+        "code": "FCAA",
+        "name": "Ary1StFPR8"
+    },
+    {
+        "skip": true,
+        "code": "FCAB",
+        "name": "Ary1StVarAd"
+    },
+    {
+        "skip": true,
+        "code": "FCAC",
+        "name": "Ary1StVarAdFunc"
+    },
+    {
+        "skip": true,
+        "code": "FCAD",
+        "name": "Ary1StVarUnk"
+    },
+    {
+        "skip": true,
+        "code": "FCAE",
+        "name": "Ary1StVarUnkFunc"
+    },
+    {
+        "skip": true,
+        "code": "FCAF",
+        "name": "Ary1StAdFunc"
+    },
+    {
+        "skip": true,
+        "code": "FCB0",
+        "name": "Ary1StVarCopy"
+    },
+    {
+        "skip": true,
+        "code": "FCB1",
+        "name": "Ary1StStrCopy"
+    },
+    {
+        "skip": true,
+        "code": "FCB2",
+        "name": "Ary1LdRfVarg"
+    },
+    {
+        "skip": true,
+        "code": "FCB3",
+        "name": "Ary1LdVarg"
+    },
+    {
+        "skip": true,
+        "code": "FCB4",
+        "name": "Ary1LdRfVargParam"
+    },
+    {
+        "skip": true,
+        "code": "FCB5",
+        "name": "Ary1StVarg"
+    },
+    {
+        "skip": true,
+        "code": "FCB6",
+        "name": "Ary1StVargCopy"
+    },
+    {
+        "skip": true,
+        "code": "FCB7",
+        "name": "Ary1StVargAd"
+    },
+    {
+        "skip": true,
+        "code": "FCB8",
+        "name": "Ary1StVargAdFunc"
+    },
+    {
+        "skip": true,
+        "code": "FCB9",
+        "name": "Ary1StVargUnk"
+    },
+    {
+        "skip": true,
+        "code": "FCBA",
+        "name": "Ary1StVargUnkFunc"
+    },
+    {
+        "skip": true,
+        "code": "FCBB",
+        "name": "MidVar"
+    },
+    {
+        "skip": true,
+        "code": "FCBC",
+        "name": "MidBStr"
+    },
+    {
+        "skip": true,
+        "code": "FCBD",
+        "name": "MidBVar"
+    },
+    {
+        "skip": true,
+        "code": "FCBE",
+        "name": "MidBStrB"
+    },
+    {
+        "skip": true,
+        "code": "FCBF",
+        "name": "LineInputVar"
+    },
+    {
+        "skip": true,
+        "code": "FCC0",
+        "name": "LineInputStr"
+    },
+    {
+        "skip": true,
+        "code": "FCC1",
+        "name": "Error"
+    },
+    {
+        "skip": true,
+        "code": "FCC2",
+        "name": "Stop"
+    },
+    {
+        "skip": true,
+        "code": "FCC3",
+        "name": "Erase"
+    },
+    {
+        "skip": true,
+        "code": "FCC4",
+        "name": "LargeBos"
+    },
+    {
+        "skip": true,
+        "code": "FCC8",
+        "name": "End"
+    },
+    {
+        "skip": true,
+        "code": "FCC9",
+        "name": "Return"
+    },
+    {
+        "skip": true,
+        "code": "FCCA",
+        "name": "FnLBound"
+    },
+    {
+        "skip": true,
+        "code": "FCCB",
+        "name": "FnUBound"
+    },
+    {
+        "skip": true,
+        "code": "FCCC",
+        "name": "ExitProcUI1"
+    },
+    {
+        "skip": true,
+        "code": "FCCD",
+        "name": "ExitProcI2"
+    },
+    {
+        "skip": true,
+        "code": "FCCE",
+        "name": "ExitProcStr"
+    },
+    {
+        "skip": true,
+        "code": "FCCF",
+        "name": "ExitProcR4"
+    },
+    {
+        "skip": true,
+        "code": "FCD0",
+        "name": "ExitProcR8"
+    },
+    {
+        "skip": true,
+        "code": "FCD1",
+        "name": "ExitProcCy"
+    },
+    {
+        "skip": true,
+        "code": "FCD3",
+        "name": "ExitProcStr"
+    },
+    {
+        "skip": true,
+        "code": "FCD4",
+        "name": "ExitProcStr"
+    },
+    {
+        "skip": true,
+        "code": "FCD5",
+        "name": "ExitProcStr"
+    },
+    {
+        "skip": true,
+        "code": "FCE0",
+        "name": "FLdUI1"
+    },
+    {
+        "skip": true,
+        "code": "FCE1",
+        "name": "Unknown45"
+    },
+    {
+        "skip": true,
+        "code": "FCE2",
+        "name": "FLdR4"
+    },
+    {
+        "skip": true,
+        "code": "FCE3",
+        "name": "Unknown46"
+    },
+    {
+        "skip": true,
+        "code": "FCE4",
+        "name": "FLdR8"
+    },
+    {
+        "skip": true,
+        "code": "FCE5",
+        "name": "FLdR8"
+    },
+    {
+        "skip": true,
+        "code": "FCE6",
+        "name": "Unknown47"
+    },
+    {
+        "skip": true,
+        "code": "FCE7",
+        "name": "Unknown48"
+    },
+    {
+        "skip": true,
+        "code": "FCE8",
+        "name": "Unknown49"
+    },
+    {
+        "skip": true,
+        "code": "FCE9",
+        "name": "FLdFPR4"
+    },
+    {
+        "skip": true,
+        "code": "FCEA",
+        "name": "Unknown50"
+    },
+    {
+        "skip": true,
+        "code": "FCEB",
+        "name": "Unknown51"
+    },
+    {
+        "skip": true,
+        "code": "FCEC",
+        "name": "Unknown52"
+    },
+    {
+        "skip": true,
+        "code": "FCED",
+        "name": "FLdVar"
+    },
+    {
+        "code": "FCF0",
+        "name": "FStUI1",
+        "desc": "Pops a Byte variable off the stack and stores it in the specified variable.",
+        "args": [
+            {
+                "source": "Variable",
+                "type": "Byte"
+            }
+        ]
+    },
+    {
+        "skip": true,
+        "code": "FCF1",
+        "name": "Unknown53"
+    },
+    {
+        "skip": true,
+        "code": "FCF2",
+        "name": "Unknown54"
+    },
+    {
+        "skip": true,
+        "code": "FCF3",
+        "name": "Unknown55"
+    },
+    {
+        "skip": true,
+        "code": "FCF4",
+        "name": "Unknown57"
+    },
+    {
+        "skip": true,
+        "code": "FCF5",
+        "name": "Unknown58"
+    },
+    {
+        "code": "FCF6",
+        "name": "FStVar",
+        "desc": "Pops a Variant off the stack and stores it in the specified variable.",
+        "args": [
+            {
+                "source": "Variable",
+                "type": "Variant"
+            }
+        ]
+    },
+    {
+        "skip": true,
+        "code": "FCF7",
+        "name": "Unknown59"
+    },
+    {
+        "skip": true,
+        "code": "FCF8",
+        "name": "FStAd"
+    },
+    {
+        "skip": true,
+        "code": "FCF9",
+        "name": "Unknown60"
+    },
+    {
+        "skip": true,
+        "code": "FCFA",
+        "name": "Unknown61"
+    },
+    {
+        "skip": true,
+        "code": "FCFB",
+        "name": "FStVarAd"
+    },
+    {
+        "skip": true,
+        "code": "FCFC",
+        "name": "FStVarAdFunc"
+    },
+    {
+        "skip": true,
+        "code": "FCFD",
+        "name": "FStVarUnk"
+    },
+    {
+        "skip": true,
+        "code": "FCFE",
+        "name": "FStVarUnkFunc"
+    },
+    {
+        "skip": true,
+        "code": "FCFF",
+        "name": "Unknown62"
+    },
+    {
+        "skip": true,
+        "code": "FD00",
+        "name": "FStVarCopy"
+    },
+    {
+        "skip": true,
+        "code": "FD01",
+        "name": "Unknown63"
+    },
+    {
+        "skip": true,
+        "code": "FD02",
+        "name": "HardType"
+    },
+    {
+        "skip": true,
+        "code": "FD03",
+        "name": "Unknown64"
+    },
+    {
+        "skip": true,
+        "code": "FD04",
+        "name": "Unknown65"
+    },
+    {
+        "skip": true,
+        "code": "FD05",
+        "name": "BranchFVar"
+    },
+    {
+        "skip": true,
+        "code": "FD06",
+        "name": "BranchFVarFree"
+    },
+    {
+        "skip": true,
+        "code": "FD07",
+        "name": "Unknown66"
+    },
+    {
+        "skip": true,
+        "code": "FD08",
+        "name": "BranchTVar"
+    },
+    {
+        "skip": true,
+        "code": "FD09",
+        "name": "BranchTVarFree"
+    },
+    {
+        "skip": true,
+        "code": "FD0A",
+        "name": "Gosub"
+    },
+    {
+        "skip": true,
+        "code": "FD0B",
+        "name": "Unknown67"
+    },
+    {
+        "skip": true,
+        "code": "FD0C",
+        "name": "Resume"
+    },
+    {
+        "skip": true,
+        "code": "FD0D",
+        "name": "AryLock"
+    },
+    {
+        "skip": true,
+        "code": "FD0E",
+        "name": "AryUnlock"
+    },
+    {
+        "skip": true,
+        "code": "FD0F",
+        "name": "AryDescTemp"
+    },
+    {
+        "skip": true,
+        "code": "FD10",
+        "name": "ILdUI1"
+    },
+    {
+        "skip": true,
+        "code": "FD11",
+        "name": "Unknown68"
+    },
+    {
+        "skip": true,
+        "code": "FD12",
+        "name": "ILdAd"
+    },
+    {
+        "skip": true,
+        "code": "FD13",
+        "name": "ILdAd"
+    },
+    {
+        "skip": true,
+        "code": "FD14",
+        "name": "ILdR8"
+    },
+    {
+        "skip": true,
+        "code": "FD15",
+        "name": "ILdR8"
+    },
+    {
+        "skip": true,
+        "code": "FD16",
+        "name": "ILdRfDarg"
+    },
+    {
+        "skip": true,
+        "code": "FD17",
+        "name": "ILdAd"
+    },
+    {
+        "skip": true,
+        "code": "FD18",
+        "name": "ILdAd"
+    },
+    {
+        "skip": true,
+        "code": "FD19",
+        "name": "ILdFPR4"
+    },
+    {
+        "skip": true,
+        "code": "FD1A",
+        "name": "ILdFPR8"
+    },
+    {
+        "skip": true,
+        "code": "FD1B",
+        "name": "ILdPr"
+    },
+    {
+        "skip": true,
+        "code": "FD1C",
+        "name": "FLdR4"
+    },
+    {
+        "skip": true,
+        "code": "FD1D",
+        "name": "ILdDarg"
+    },
+    {
+        "skip": true,
+        "code": "FD20",
+        "name": "IStUI1"
+    },
+    {
+        "skip": true,
+        "code": "FD21",
+        "name": "IStI2"
+    },
+    {
+        "skip": true,
+        "code": "FD22",
+        "name": "IStI4"
+    },
+    {
+        "skip": true,
+        "code": "FD23",
+        "name": "IStI4"
+    },
+    {
+        "skip": true,
+        "code": "FD24",
+        "name": "IStR8"
+    },
+    {
+        "skip": true,
+        "code": "FD25",
+        "name": "IStR8"
+    },
+    {
+        "skip": true,
+        "code": "FD26",
+        "name": "IStDarg"
+    },
+    {
+        "skip": true,
+        "code": "FD27",
+        "name": "IStStr"
+    },
+    {
+        "skip": true,
+        "code": "FD28",
+        "name": "IStAd"
+    },
+    {
+        "skip": true,
+        "code": "FD29",
+        "name": "IStFPR4"
+    },
+    {
+        "skip": true,
+        "code": "FD2A",
+        "name": "IStFPR8"
+    },
+    {
+        "skip": true,
+        "code": "FD2B",
+        "name": "IStDargAd"
+    },
+    {
+        "skip": true,
+        "code": "FD2C",
+        "name": "IStDargAdFunc"
+    },
+    {
+        "skip": true,
+        "code": "FD2D",
+        "name": "IStDargUnk"
+    },
+    {
+        "skip": true,
+        "code": "FD2E",
+        "name": "IStDargUnkFunc"
+    },
+    {
+        "skip": true,
+        "code": "FD2F",
+        "name": "IStAdFunc"
+    },
+    {
+        "skip": true,
+        "code": "FD30",
+        "name": "IStDargCopy"
+    },
+    {
+        "skip": true,
+        "code": "FD31",
+        "name": "IStStrCopy"
+    },
+    {
+        "skip": true,
+        "code": "FD32",
+        "name": "PrintChan"
+    },
+    {
+        "skip": true,
+        "code": "FD33",
+        "name": "WriteChan"
+    },
+    {
+        "skip": true,
+        "code": "FD34",
+        "name": "PrintComma"
+    },
+    {
+        "skip": true,
+        "code": "FD35",
+        "name": "PrintEos"
+    },
+    {
+        "skip": true,
+        "code": "FD36",
+        "name": "PrintNL"
+    },
+    {
+        "skip": true,
+        "code": "FD37",
+        "name": "PrintItemComma"
+    },
+    {
+        "skip": true,
+        "code": "FD38",
+        "name": "PrintItemSemi"
+    },
+    {
+        "skip": true,
+        "code": "FD39",
+        "name": "PrintItemNL"
+    },
+    {
+        "skip": true,
+        "code": "FD3A",
+        "name": "PrintObj"
+    },
+    {
+        "skip": true,
+        "code": "FD3B",
+        "name": "PrintSpc"
+    },
+    {
+        "skip": true,
+        "code": "FD3C",
+        "name": "PrintTab"
+    },
+    {
+        "skip": true,
+        "code": "FD3D",
+        "name": "Close"
+    },
+    {
+        "skip": true,
+        "code": "FD3E",
+        "name": "CloseAll"
+    },
+    {
+        "skip": true,
+        "code": "FD3F",
+        "name": "Unknown69"
+    },
+    {
+        "skip": true,
+        "code": "FD40",
+        "name": "IWMemLdUI1"
+    },
+    {
+        "skip": true,
+        "code": "FD41",
+        "name": "IWMemLdI2"
+    },
+    {
+        "skip": true,
+        "code": "FD42",
+        "name": "IWMemLdI4"
+    },
+    {
+        "skip": true,
+        "code": "FD43",
+        "name": "IWMemLdI4"
+    },
+    {
+        "skip": true,
+        "code": "FD44",
+        "name": "IWMemLdCy"
+    },
+    {
+        "skip": true,
+        "code": "FD45",
+        "name": "IWMemLdCy"
+    },
+    {
+        "skip": true,
+        "code": "FD46",
+        "name": "IWMemLdRfDarg"
+    },
+    {
+        "skip": true,
+        "code": "FD47",
+        "name": "IWMemLdI4"
+    },
+    {
+        "skip": true,
+        "code": "FD48",
+        "name": "IWMemLdI4"
+    },
+    {
+        "skip": true,
+        "code": "FD49",
+        "name": "IWMemLdFPR4"
+    },
+    {
+        "skip": true,
+        "code": "FD4A",
+        "name": "IWMemLdFPR8"
+    },
+    {
+        "skip": true,
+        "code": "FD4B",
+        "name": "IWMemLdPr"
+    },
+    {
+        "skip": true,
+        "code": "FD4C",
+        "name": "IWMemLdRf"
+    },
+    {
+        "skip": true,
+        "code": "FD4D",
+        "name": "IWMemLdDarg"
+    },
+    {
+        "skip": true,
+        "code": "FD50",
+        "name": "IWMemStUI1"
+    },
+    {
+        "skip": true,
+        "code": "FD51",
+        "name": "IWMemStI2"
+    },
+    {
+        "skip": true,
+        "code": "FD52",
+        "name": "IWMemStR4"
+    },
+    {
+        "skip": true,
+        "code": "FD53",
+        "name": "IWMemStR4"
+    },
+    {
+        "skip": true,
+        "code": "FD54",
+        "name": "IWMemStCy"
+    },
+    {
+        "skip": true,
+        "code": "FD55",
+        "name": "IWMemStCy"
+    },
+    {
+        "skip": true,
+        "code": "FD56",
+        "name": "IWMemStDarg"
+    },
+    {
+        "skip": true,
+        "code": "FD57",
+        "name": "IWMemStStr"
+    },
+    {
+        "skip": true,
+        "code": "FD58",
+        "name": "IWMemStAd"
+    },
+    {
+        "skip": true,
+        "code": "FD59",
+        "name": "IWMemStFPR4"
+    },
+    {
+        "skip": true,
+        "code": "FD5A",
+        "name": "IWMemStFPR8"
+    },
+    {
+        "skip": true,
+        "code": "FD5B",
+        "name": "IWMemStDargAd"
+    },
+    {
+        "skip": true,
+        "code": "FD5C",
+        "name": "IWMemStDargAdFunc"
+    },
+    {
+        "skip": true,
+        "code": "FD5D",
+        "name": "IWMemStDargUnk"
+    },
+    {
+        "skip": true,
+        "code": "FD5E",
+        "name": "IWMemStDargUnkFunc"
+    },
+    {
+        "skip": true,
+        "code": "FD5F",
+        "name": "IWMemStAdFunc"
+    },
+    {
+        "skip": true,
+        "code": "FD60",
+        "name": "IWMemStDargCopy"
+    },
+    {
+        "skip": true,
+        "code": "FD61",
+        "name": "IWMemStStrCopy"
+    },
+    {
+        "skip": true,
+        "code": "FD62",
+        "name": "Unknown70"
+    },
+    {
+        "skip": true,
+        "code": "FD63",
+        "name": "FStVarNoPop"
+    },
+    {
+        "skip": true,
+        "code": "FD64",
+        "name": "Unknown71"
+    },
+    {
+        "skip": true,
+        "code": "FD67",
+        "name": "CVarUI1"
+    },
+    {
+        "skip": true,
+        "code": "FD68",
+        "name": "CVarI2"
+    },
+    {
+        "skip": true,
+        "code": "FD69",
+        "name": "CVarI4"
+    },
+    {
+        "skip": true,
+        "code": "FD6A",
+        "name": "CVarR4"
+    },
+    {
+        "skip": true,
+        "code": "FD6B",
+        "name": "CVarR8"
+    },
+    {
+        "skip": true,
+        "code": "FD6C",
+        "name": "CVarCy"
+    },
+    {
+        "skip": true,
+        "code": "FD6E",
+        "name": "CVarStr"
+    },
+    {
+        "skip": true,
+        "code": "FD6F",
+        "name": "CVarAd"
+    },
+    {
+        "skip": true,
+        "code": "FD70",
+        "name": "MemLdUI1"
+    },
+    {
+        "skip": true,
+        "code": "FD71",
+        "name": "MemLdI2"
+    },
+    {
+        "skip": true,
+        "code": "FD72",
+        "name": "MemLdR4"
+    },
+    {
+        "skip": true,
+        "code": "FD73",
+        "name": "MemLdR4"
+    },
+    {
+        "skip": true,
+        "code": "FD74",
+        "name": "MemLdR8"
+    },
+    {
+        "skip": true,
+        "code": "FD75",
+        "name": "MemLdR8"
+    },
+    {
+        "skip": true,
+        "code": "FD76",
+        "name": "MemLdRfVar"
+    },
+    {
+        "skip": true,
+        "code": "FD77",
+        "name": "MemLdR4"
+    },
+    {
+        "skip": true,
+        "code": "FD78",
+        "name": "MemLdR4"
+    },
+    {
+        "skip": true,
+        "code": "FD79",
+        "name": "MemLdFPR4"
+    },
+    {
+        "skip": true,
+        "code": "FD7A",
+        "name": "MemLdFPR8"
+    },
+    {
+        "skip": true,
+        "code": "FD7B",
+        "name": "MemLdPr"
+    },
+    {
+        "skip": true,
+        "code": "FD7C",
+        "name": "MemLdRfVar"
+    },
+    {
+        "skip": true,
+        "code": "FD7D",
+        "name": "MemLdVar"
+    },
+    {
+        "skip": true,
+        "code": "FD80",
+        "name": "MemStUI1"
+    },
+    {
+        "skip": true,
+        "code": "FD81",
+        "name": "MemStI2"
+    },
+    {
+        "skip": true,
+        "code": "FD82",
+        "name": "MemStR4"
+    },
+    {
+        "skip": true,
+        "code": "FD83",
+        "name": "MemStR4"
+    },
+    {
+        "skip": true,
+        "code": "FD84",
+        "name": "MemStCy"
+    },
+    {
+        "skip": true,
+        "code": "FD85",
+        "name": "MemStCy"
+    },
+    {
+        "skip": true,
+        "code": "FD86",
+        "name": "MemStVar"
+    },
+    {
+        "skip": true,
+        "code": "FD87",
+        "name": "MemStStr"
+    },
+    {
+        "skip": true,
+        "code": "FD88",
+        "name": "MemStAd"
+    },
+    {
+        "skip": true,
+        "code": "FD89",
+        "name": "MemStFPR4"
+    },
+    {
+        "skip": true,
+        "code": "FD8A",
+        "name": "MemStFPR8"
+    },
+    {
+        "skip": true,
+        "code": "FD8B",
+        "name": "MemStVarAd"
+    },
+    {
+        "skip": true,
+        "code": "FD8C",
+        "name": "MemStVarAdFunc"
+    },
+    {
+        "skip": true,
+        "code": "FD8D",
+        "name": "MemStVarUnk"
+    },
+    {
+        "skip": true,
+        "code": "FD8E",
+        "name": "MemStVarUnkFunc"
+    },
+    {
+        "skip": true,
+        "code": "FD8F",
+        "name": "MemStAdFunc"
+    },
+    {
+        "skip": true,
+        "code": "FD90",
+        "name": "MemStVarCopy"
+    },
+    {
+        "skip": true,
+        "code": "FD91",
+        "name": "MemStStrCopy"
+    },
+    {
+        "skip": true,
+        "code": "FD93",
+        "name": "CDargRef"
+    },
+    {
+        "skip": true,
+        "code": "FD94",
+        "name": "CVarRef"
+    },
+    {
+        "skip": true,
+        "code": "FD95",
+        "name": "ExitProcCb"
+    },
+    {
+        "skip": true,
+        "code": "FD96",
+        "name": "ExitProcCbStack"
+    },
+    {
+        "skip": true,
+        "code": "FD99",
+        "name": "Unknown72"
+    },
+    {
+        "skip": true,
+        "code": "FD9A",
+        "name": "Unknown73"
+    },
+    {
+        "skip": true,
+        "code": "FD9B",
+        "name": "Unknown74"
+    },
+    {
+        "skip": true,
+        "code": "FD9C",
+        "name": "FStAdNoPop"
+    },
+    {
+        "skip": true,
+        "code": "FD9D",
+        "name": "Unknown75"
+    },
+    {
+        "skip": true,
+        "code": "FD9E",
+        "name": "Unknown76"
+    },
+    {
+        "skip": true,
+        "code": "FD9F",
+        "name": "LdPrVar"
+    },
+    {
+        "skip": true,
+        "code": "FDA0",
+        "name": "ImpAdLdUI1"
+    },
+    {
+        "skip": true,
+        "code": "FDA1",
+        "name": "ImpAdLdI2"
+    },
+    {
+        "skip": true,
+        "code": "FDA2",
+        "name": "ImpAdLdStr"
+    },
+    {
+        "skip": true,
+        "code": "FDA3",
+        "name": "ImpAdLdStr"
+    },
+    {
+        "skip": true,
+        "code": "FDA4",
+        "name": "ImpAdLdCy"
+    },
+    {
+        "skip": true,
+        "code": "FDA5",
+        "name": "ImpAdLdCy"
+    },
+    {
+        "skip": true,
+        "code": "FDA6",
+        "name": "Unknown77"
+    },
+    {
+        "skip": true,
+        "code": "FDA7",
+        "name": "ImpAdLdStr"
+    },
+    {
+        "skip": true,
+        "code": "FDA8",
+        "name": "ImpAdLdStr"
+    },
+    {
+        "skip": true,
+        "code": "FDA9",
+        "name": "ImpAdLdFPR4"
+    },
+    {
+        "skip": true,
+        "code": "FDAA",
+        "name": "ImpAdLdFPR8"
+    },
+    {
+        "skip": true,
+        "code": "FDAB",
+        "name": "ImpAdLdPr"
+    },
+    {
+        "skip": true,
+        "code": "FDAC",
+        "name": "Unknown78"
+    },
+    {
+        "skip": true,
+        "code": "FDAD",
+        "name": "ImpAdLdVar"
+    },
+    {
+        "skip": true,
+        "code": "FDB0",
+        "name": "ImpAdStUI1"
+    },
+    {
+        "skip": true,
+        "code": "FDB1",
+        "name": "ImpAdStI2"
+    },
+    {
+        "skip": true,
+        "code": "FDB2",
+        "name": "ImpAdStR4"
+    },
+    {
+        "skip": true,
+        "code": "FDB3",
+        "name": "ImpAdStR4"
+    },
+    {
+        "skip": true,
+        "code": "FDB4",
+        "name": "ImpAdStR8"
+    },
+    {
+        "skip": true,
+        "code": "FDB5",
+        "name": "ImpAdStR8"
+    },
+    {
+        "skip": true,
+        "code": "FDB6",
+        "name": "ImpAdStVar"
+    },
+    {
+        "skip": true,
+        "code": "FDB7",
+        "name": "ImpAdStStr"
+    },
+    {
+        "skip": true,
+        "code": "FDB8",
+        "name": "ImpAdStAd"
+    },
+    {
+        "skip": true,
+        "code": "FDB9",
+        "name": "ImpAdStFPR4"
+    },
+    {
+        "skip": true,
+        "code": "FDBA",
+        "name": "ImpAdStFPR8"
+    },
+    {
+        "skip": true,
+        "code": "FDBB",
+        "name": "ImpAdStVarAd"
+    },
+    {
+        "skip": true,
+        "code": "FDBC",
+        "name": "ImpAdStVarAdFunc"
+    },
+    {
+        "skip": true,
+        "code": "FDBD",
+        "name": "ImpAdStVarUnk"
+    },
+    {
+        "skip": true,
+        "code": "FDBE",
+        "name": "ImpAdStVarUnkFunc"
+    },
+    {
+        "skip": true,
+        "code": "FDBF",
+        "name": "ImpAdStAdFunc"
+    },
+    {
+        "skip": true,
+        "code": "FDC0",
+        "name": "ImpAdStVarCopy"
+    },
+    {
+        "skip": true,
+        "code": "FDC1",
+        "name": "ImpAdStStrCopy"
+    },
+    {
+        "skip": true,
+        "code": "FDC2",
+        "name": "PopTmpLdAd1"
+    },
+    {
+        "skip": true,
+        "code": "FDC3",
+        "name": "PopTmpLdAd2"
+    },
+    {
+        "skip": true,
+        "code": "FDC4",
+        "name": "PopTmpLdAdStr"
+    },
+    {
+        "skip": true,
+        "code": "FDC5",
+        "name": "PopTmpLdAd8"
+    },
+    {
+        "skip": true,
+        "code": "FDC6",
+        "name": "PopTmpLdAdVar"
+    },
+    {
+        "skip": true,
+        "code": "FDC7",
+        "name": "PopTmpLdAdStr"
+    },
+    {
+        "skip": true,
+        "code": "FDC8",
+        "name": "PopTmpLdAdFPR4"
+    },
+    {
+        "skip": true,
+        "code": "FDC9",
+        "name": "PopTmpLdAdFPR8"
+    },
+    {
+        "skip": true,
+        "code": "FDCA",
+        "name": "CopyBytes"
+    },
+    {
+        "skip": true,
+        "code": "FDCB",
+        "name": "ExitForCollObj"
+    },
+    {
+        "skip": true,
+        "code": "FDCC",
+        "name": "ExitForCollObj"
+    },
+    {
+        "skip": true,
+        "code": "FDCD",
+        "name": "ExitForCollObj"
+    },
+    {
+        "skip": true,
+        "code": "FDCE",
+        "name": "ExitForAryVar"
+    },
+    {
+        "skip": true,
+        "code": "FDCF",
+        "name": "ExitForVar"
+    },
+    {
+        "skip": true,
+        "code": "FDD0",
+        "name": "FMemLdUI1"
+    },
+    {
+        "skip": true,
+        "code": "FDD1",
+        "name": "FMemLdI2"
+    },
+    {
+        "skip": true,
+        "code": "FDD2",
+        "name": "FMemLdR4"
+    },
+    {
+        "skip": true,
+        "code": "FDD3",
+        "name": "FMemLdR4"
+    },
+    {
+        "skip": true,
+        "code": "FDD4",
+        "name": "FMemLdR8"
+    },
+    {
+        "skip": true,
+        "code": "FDD5",
+        "name": "FMemLdR8"
+    },
+    {
+        "skip": true,
+        "code": "FDD6",
+        "name": "FMemLdRf"
+    },
+    {
+        "skip": true,
+        "code": "FDD7",
+        "name": "FMemLdR4"
+    },
+    {
+        "skip": true,
+        "code": "FDD8",
+        "name": "FMemLdR4"
+    },
+    {
+        "skip": true,
+        "code": "FDD9",
+        "name": "FMemLdFPR4"
+    },
+    {
+        "skip": true,
+        "code": "FDDA",
+        "name": "FMemLdFPR8"
+    },
+    {
+        "skip": true,
+        "code": "FDDB",
+        "name": "FMemLdPr"
+    },
+    {
+        "skip": true,
+        "code": "FDDC",
+        "name": "FMemLdRf"
+    },
+    {
+        "skip": true,
+        "code": "FDDD",
+        "name": "FMemLdVar"
+    },
+    {
+        "skip": true,
+        "code": "FDE0",
+        "name": "FMemStUI1"
+    },
+    {
+        "skip": true,
+        "code": "FDE1",
+        "name": "FMemStI2"
+    },
+    {
+        "skip": true,
+        "code": "FDE2",
+        "name": "FMemStR4"
+    },
+    {
+        "skip": true,
+        "code": "FDE3",
+        "name": "FMemStR4"
+    },
+    {
+        "skip": true,
+        "code": "FDE4",
+        "name": "FMemStR8"
+    },
+    {
+        "skip": true,
+        "code": "FDE5",
+        "name": "FMemStR8"
+    },
+    {
+        "skip": true,
+        "code": "FDE6",
+        "name": "FMemStVar"
+    },
+    {
+        "skip": true,
+        "code": "FDE7",
+        "name": "FMemStStr"
+    },
+    {
+        "skip": true,
+        "code": "FDE8",
+        "name": "FMemStAd"
+    },
+    {
+        "skip": true,
+        "code": "FDE9",
+        "name": "FMemStFPR4"
+    },
+    {
+        "skip": true,
+        "code": "FDEA",
+        "name": "FMemStFPR8"
+    },
+    {
+        "skip": true,
+        "code": "FDEB",
+        "name": "FMemStVarAd"
+    },
+    {
+        "skip": true,
+        "code": "FDEC",
+        "name": "FMemStVarAdFunc"
+    },
+    {
+        "skip": true,
+        "code": "FDED",
+        "name": "FMemStVarUnk"
+    },
+    {
+        "skip": true,
+        "code": "FDEE",
+        "name": "FMemStVarUnkFunc"
+    },
+    {
+        "skip": true,
+        "code": "FDEF",
+        "name": "FMemStAdFunc"
+    },
+    {
+        "skip": true,
+        "code": "FDF0",
+        "name": "FMemStVarCopy"
+    },
+    {
+        "skip": true,
+        "code": "FDF1",
+        "name": "FMemStStrCopy"
+    },
+    {
+        "skip": true,
+        "code": "FDF2",
+        "name": "CastAd"
+    },
+    {
+        "skip": true,
+        "code": "FDF3",
+        "name": "CastAdVar"
+    },
+    {
+        "skip": true,
+        "code": "FDF4",
+        "name": "New"
+    },
+    {
+        "skip": true,
+        "code": "FDF5",
+        "name": "NewIfNullRf"
+    },
+    {
+        "skip": true,
+        "code": "FDF6",
+        "name": "NewIfNullAd"
+    },
+    {
+        "skip": true,
+        "code": "FDF7",
+        "name": "Unknown79"
+    },
+    {
+        "skip": true,
+        "code": "FDF8",
+        "name": "CVarBoolI2"
+    },
+    {
+        "skip": true,
+        "code": "FDF9",
+        "name": "CVarDateVar"
+    },
+    {
+        "skip": true,
+        "code": "FDFA",
+        "name": "CVarErrI4"
+    },
+    {
+        "skip": true,
+        "code": "FDFB",
+        "name": "CVarDate"
+    },
+    {
+        "skip": true,
+        "code": "FDFC",
+        "name": "CVarAryVarg"
+    },
+    {
+        "skip": true,
+        "code": "FDFD",
+        "name": "CStrVarTmp"
+    },
+    {
+        "skip": true,
+        "code": "FDFE",
+        "name": "CStrVarVal"
+    },
+    {
+        "skip": true,
+        "code": "FDFF",
+        "name": "DestructOFrame"
+    },
+    {
+        "skip": true,
+        "code": "FE00",
+        "name": "ThisVCallUI1"
+    },
+    {
+        "skip": true,
+        "code": "FE01",
+        "name": "ThisVCallI2"
+    },
+    {
+        "skip": true,
+        "code": "FE02",
+        "name": "ThisVCallI2"
+    },
+    {
+        "skip": true,
+        "code": "FE03",
+        "name": "ThisVCallR4"
+    },
+    {
+        "skip": true,
+        "code": "FE04",
+        "name": "ThisVCallR8"
+    },
+    {
+        "skip": true,
+        "code": "FE05",
+        "name": "ThisVCallCy"
+    },
+    {
+        "skip": true,
+        "code": "FE07",
+        "name": "ThisVCallI2"
+    },
+    {
+        "skip": true,
+        "code": "FE08",
+        "name": "ThisVCallI2"
+    },
+    {
+        "skip": true,
+        "code": "FE09",
+        "name": "ThisVCallHidden"
+    },
+    {
+        "skip": true,
+        "code": "FE0A",
+        "name": "ThisVCallHidden"
+    },
+    {
+        "skip": true,
+        "code": "FE0C",
+        "name": "ThisVCallHidden"
+    },
+    {
+        "skip": true,
+        "code": "FE0D",
+        "name": "ThisVCallCbFrame"
+    },
+    {
+        "skip": true,
+        "code": "FE0E",
+        "name": "StLsetFixStr"
+    },
+    {
+        "skip": true,
+        "code": "FE0F",
+        "name": "StFixedStrFree"
+    },
+    {
+        "skip": true,
+        "code": "FE10",
+        "name": "VCallUI1"
+    },
+    {
+        "skip": true,
+        "code": "FE11",
+        "name": "VCallStr"
+    },
+    {
+        "skip": true,
+        "code": "FE12",
+        "name": "VCallStr"
+    },
+    {
+        "skip": true,
+        "code": "FE13",
+        "name": "VCallR4"
+    },
+    {
+        "skip": true,
+        "code": "FE14",
+        "name": "VCallR8"
+    },
+    {
+        "skip": true,
+        "code": "FE15",
+        "name": "VCallCy"
+    },
+    {
+        "skip": true,
+        "code": "FE17",
+        "name": "VCallStr"
+    },
+    {
+        "skip": true,
+        "code": "FE18",
+        "name": "VCallStr"
+    },
+    {
+        "skip": true,
+        "code": "FE19",
+        "name": "VCallFPR8"
+    },
+    {
+        "skip": true,
+        "code": "FE1A",
+        "name": "VCallFPR8"
+    },
+    {
+        "skip": true,
+        "code": "FE1C",
+        "name": "VCallFPR8"
+    },
+    {
+        "skip": true,
+        "code": "FE1D",
+        "name": "VCallCbFrame"
+    },
+    {
+        "skip": true,
+        "code": "FE1E",
+        "name": "StFixedStrR"
+    },
+    {
+        "skip": true,
+        "code": "FE1F",
+        "name": "StFixedStrRFree"
+    },
+    {
+        "skip": true,
+        "code": "FE20",
+        "name": "ImpAdCallUI1"
+    },
+    {
+        "skip": true,
+        "code": "FE21",
+        "name": "ImpAdCallI4"
+    },
+    {
+        "skip": true,
+        "code": "FE22",
+        "name": "Unknown80"
+    },
+    {
+        "skip": true,
+        "code": "FE23",
+        "name": "ImpAdCallR4"
+    },
+    {
+        "skip": true,
+        "code": "FE24",
+        "name": "ImpAdCallR8"
+    },
+    {
+        "skip": true,
+        "code": "FE25",
+        "name": "ImpAdCallCy"
+    },
+    {
+        "skip": true,
+        "code": "FE27",
+        "name": "ImpAdCallI4"
+    },
+    {
+        "skip": true,
+        "code": "FE28",
+        "name": "Unknown81"
+    },
+    {
+        "skip": true,
+        "code": "FE29",
+        "name": "Unknown82"
+    },
+    {
+        "skip": true,
+        "code": "FE2A",
+        "name": "Unknown83"
+    },
+    {
+        "skip": true,
+        "code": "FE2C",
+        "name": "Unknown84"
+    },
+    {
+        "skip": true,
+        "code": "FE2D",
+        "name": "ImpAdCallCbFrame"
+    },
+    {
+        "skip": true,
+        "code": "FE2E",
+        "name": "LdStkRf"
+    },
+    {
+        "skip": true,
+        "code": "FE2F",
+        "name": "LdFrameRf"
+    },
+    {
+        "skip": true,
+        "code": "FE3D",
+        "name": "LitVarUI1"
+    },
+    {
+        "skip": true,
+        "code": "FE4D",
+        "name": "SetVarVar"
+    },
+    {
+        "skip": true,
+        "code": "FE4E",
+        "name": "SetVarVarFunc"
+    },
+    {
+        "skip": true,
+        "code": "FE4F",
+        "name": "ImpAdCallHresult"
+    },
+    {
+        "skip": true,
+        "code": "FE5D",
+        "name": "OpenFile"
+    },
+    {
+        "skip": true,
+        "code": "FE5E",
+        "name": "LockFile"
+    },
+    {
+        "skip": true,
+        "code": "FE60",
+        "name": "EraseDestruct"
+    },
+    {
+        "skip": true,
+        "code": "FE61",
+        "name": "LdFixedStr"
+    },
+    {
+        "skip": true,
+        "code": "FE62",
+        "name": "ForUI1"
+    },
+    {
+        "skip": true,
+        "code": "FE63",
+        "name": "ForI2"
+    },
+    {
+        "skip": true,
+        "code": "FE64",
+        "name": "ForI4"
+    },
+    {
+        "skip": true,
+        "code": "FE65",
+        "name": "ForR4"
+    },
+    {
+        "skip": true,
+        "code": "FE66",
+        "name": "ForR8"
+    },
+    {
+        "skip": true,
+        "code": "FE67",
+        "name": "ForCy"
+    },
+    {
+        "skip": true,
+        "code": "FE68",
+        "name": "ForVar"
+    },
+    {
+        "skip": true,
+        "code": "FE6A",
+        "name": "ForStepUI1"
+    },
+    {
+        "skip": true,
+        "code": "FE6B",
+        "name": "ForStepI2"
+    },
+    {
+        "skip": true,
+        "code": "FE6C",
+        "name": "ForStepI4"
+    },
+    {
+        "skip": true,
+        "code": "FE6D",
+        "name": "ForStepR4"
+    },
+    {
+        "skip": true,
+        "code": "FE6E",
+        "name": "ForStepR8"
+    },
+    {
+        "skip": true,
+        "code": "FE6F",
+        "name": "ForStepCy"
+    },
+    {
+        "skip": true,
+        "code": "FE70",
+        "name": "ForStepVar"
+    },
+    {
+        "skip": true,
+        "code": "FE72",
+        "name": "ForEachCollVar"
+    },
+    {
+        "skip": true,
+        "code": "FE73",
+        "name": "NextEachCollVar"
+    },
+    {
+        "skip": true,
+        "code": "FE74",
+        "name": "ForEachCollAd"
+    },
+    {
+        "skip": true,
+        "code": "FE75",
+        "name": "NextEachCollAd"
+    },
+    {
+        "skip": true,
+        "code": "FE76",
+        "name": "ForEachAryVar"
+    },
+    {
+        "skip": true,
+        "code": "FE77",
+        "name": "NextEachAryVar"
+    },
+    {
+        "skip": true,
+        "code": "FE78",
+        "name": "NextUI1"
+    },
+    {
+        "skip": true,
+        "code": "FE79",
+        "name": "Unknown85"
+    },
+    {
+        "skip": true,
+        "code": "FE7A",
+        "name": "Unknown86"
+    },
+    {
+        "skip": true,
+        "code": "FE7B",
+        "name": "Unknown87"
+    },
+    {
+        "skip": true,
+        "code": "FE7C",
+        "name": "NextR8"
+    },
+    {
+        "skip": true,
+        "code": "FE7D",
+        "name": "Unknown88"
+    },
+    {
+        "skip": true,
+        "code": "FE7E",
+        "name": "NextStepVar"
+    },
+    {
+        "skip": true,
+        "code": "FE80",
+        "name": "NextStepUI1"
+    },
+    {
+        "skip": true,
+        "code": "FE81",
+        "name": "Unknown89"
+    },
+    {
+        "skip": true,
+        "code": "FE82",
+        "name": "NextStepI4"
+    },
+    {
+        "skip": true,
+        "code": "FE83",
+        "name": "NextStepR4"
+    },
+    {
+        "skip": true,
+        "code": "FE84",
+        "name": "Unknown90"
+    },
+    {
+        "skip": true,
+        "code": "FE85",
+        "name": "Unknown91"
+    },
+    {
+        "skip": true,
+        "code": "FE86",
+        "name": "Unknown92"
+    },
+    {
+        "skip": true,
+        "code": "FE88",
+        "name": "ForEachCollObj"
+    },
+    {
+        "skip": true,
+        "code": "FE89",
+        "name": "ForEachVar"
+    },
+    {
+        "skip": true,
+        "code": "FE8A",
+        "name": "ForEachVarFree"
+    },
+    {
+        "skip": true,
+        "code": "FE8B",
+        "name": "NextEachCollObj"
+    },
+    {
+        "skip": true,
+        "code": "FE8C",
+        "name": "NextEachVar"
+    },
+    {
+        "skip": true,
+        "code": "FE8D",
+        "name": "CheckType"
+    },
+    {
+        "skip": true,
+        "code": "FE8E",
+        "name": "Redim"
+    },
+    {
+        "skip": true,
+        "code": "FE8F",
+        "name": "RedimPreserve"
+    },
+    {
+        "skip": true,
+        "code": "FE90",
+        "name": "RedimVar"
+    },
+    {
+        "skip": true,
+        "code": "FE91",
+        "name": "RedimPreserveVar"
+    },
+    {
+        "skip": true,
+        "code": "FE92",
+        "name": "FDupVar"
+    },
+    {
+        "skip": true,
+        "code": "FE93",
+        "name": "FDupStr"
+    },
+    {
+        "skip": true,
+        "code": "FE95",
+        "name": "OnGosub"
+    },
+    {
+        "skip": true,
+        "code": "FE96",
+        "name": "OnGoto"
+    },
+    {
+        "skip": true,
+        "code": "FE97",
+        "name": "AddRef"
+    },
+    {
+        "skip": true,
+        "code": "FE98",
+        "name": "LateMemCall"
+    },
+    {
+        "skip": true,
+        "code": "FE99",
+        "name": "LateMemLdVar"
+    },
+    {
+        "skip": true,
+        "code": "FE9A",
+        "name": "LateMemCallLdVar"
+    },
+    {
+        "skip": true,
+        "code": "FE9B",
+        "name": "LateMemSt"
+    },
+    {
+        "skip": true,
+        "code": "FE9C",
+        "name": "LateMemCallSt"
+    },
+    {
+        "skip": true,
+        "code": "FE9D",
+        "name": "LateMemStAd"
+    },
+    {
+        "skip": true,
+        "code": "FE9E",
+        "name": "ExitProcFrameCb"
+    },
+    {
+        "skip": true,
+        "code": "FE9F",
+        "name": "ExitProcFrameCbStack"
+    },
+    {
+        "skip": true,
+        "code": "FEA0",
+        "name": "LateIdCall"
+    },
+    {
+        "skip": true,
+        "code": "FEA1",
+        "name": "LateIdLdVar"
+    },
+    {
+        "skip": true,
+        "code": "FEA2",
+        "name": "LateIdCallLdVar"
+    },
+    {
+        "skip": true,
+        "code": "FEA3",
+        "name": "LateIdSt"
+    },
+    {
+        "skip": true,
+        "code": "FEA4",
+        "name": "LateIdCallSt"
+    },
+    {
+        "skip": true,
+        "code": "FEA5",
+        "name": "LateIdStAd"
+    },
+    {
+        "skip": true,
+        "code": "FEA6",
+        "name": "LateMemNamedCall"
+    },
+    {
+        "skip": true,
+        "code": "FEA7",
+        "name": "LateMemNamedCallLdVar"
+    },
+    {
+        "skip": true,
+        "code": "FEA8",
+        "name": "LateMemNamedCallSt"
+    },
+    {
+        "skip": true,
+        "code": "FEA9",
+        "name": "LateMemNamedStAd"
+    },
+    {
+        "skip": true,
+        "code": "FEAA",
+        "name": "LateIdNamedCall"
+    },
+    {
+        "skip": true,
+        "code": "FEAB",
+        "name": "LateIdNamedCallLdVar"
+    },
+    {
+        "skip": true,
+        "code": "FEAC",
+        "name": "LateIdNamedCallSt"
+    },
+    {
+        "skip": true,
+        "code": "FEAD",
+        "name": "LateIdNamedStAd"
+    },
+    {
+        "skip": true,
+        "code": "FEAE",
+        "name": "VarIndexLdVar"
+    },
+    {
+        "skip": true,
+        "code": "FEAF",
+        "name": "VarIndexLdRfVar"
+    },
+    {
+        "skip": true,
+        "code": "FEB0",
+        "name": "VarIndexSt"
+    },
+    {
+        "skip": true,
+        "code": "FEB1",
+        "name": "VarIndexStAd"
+    },
+    {
+        "skip": true,
+        "code": "FEB2",
+        "name": "Unknown93"
+    },
+    {
+        "skip": true,
+        "code": "FEB3",
+        "name": "Unknown94"
+    },
+    {
+        "skip": true,
+        "code": "FEB4",
+        "name": "Unknown95"
+    },
+    {
+        "skip": true,
+        "code": "FEB5",
+        "name": "Unknown96"
+    },
+    {
+        "skip": true,
+        "code": "FEB6",
+        "name": "LitI2FP"
+    },
+    {
+        "skip": true,
+        "code": "FEB7",
+        "name": "LitCy4"
+    },
+    {
+        "skip": true,
+        "code": "FEB8",
+        "name": "Unknown97"
+    },
+    {
+        "skip": true,
+        "code": "FEB9",
+        "name": "Unknown98"
+    },
+    {
+        "skip": true,
+        "code": "FEBA",
+        "name": "LitR4FP"
+    },
+    {
+        "skip": true,
+        "code": "FEBB",
+        "name": "LitR8"
+    },
+    {
+        "skip": true,
+        "code": "FEBC",
+        "name": "LitR8"
+    },
+    {
+        "skip": true,
+        "code": "FEBD",
+        "name": "LitR8FP"
+    },
+    {
+        "skip": true,
+        "code": "FEBE",
+        "name": "LitR8FP"
+    },
+    {
+        "skip": true,
+        "code": "FEBF",
+        "name": "Unknown99"
+    },
+    {
+        "skip": true,
+        "code": "FEC0",
+        "name": "Unknown100"
+    },
+    {
+        "skip": true,
+        "code": "FEC1",
+        "name": "LitVarI4"
+    },
+    {
+        "skip": true,
+        "code": "FEC2",
+        "name": "LitVarR4"
+    },
+    {
+        "skip": true,
+        "code": "FEC3",
+        "name": "LitVarCy"
+    },
+    {
+        "skip": true,
+        "code": "FEC4",
+        "name": "LitVarR8"
+    },
+    {
+        "skip": true,
+        "code": "FEC5",
+        "name": "LitVarDate"
+    },
+    {
+        "skip": true,
+        "code": "FEC6",
+        "name": "Unknown101"
+    },
+    {
+        "skip": true,
+        "code": "FEC7",
+        "name": "CStrBool"
+    },
+    {
+        "skip": true,
+        "code": "FEC8",
+        "name": "CStrDate"
+    },
+    {
+        "skip": true,
+        "code": "FEC9",
+        "name": "CDateStr"
+    },
+    {
+        "skip": true,
+        "code": "FECC",
+        "name": "FreeStrNoPop"
+    },
+    {
+        "skip": true,
+        "code": "FECD",
+        "name": "FreeVarNoPop"
+    },
+    {
+        "skip": true,
+        "code": "FECE",
+        "name": "FreeAdNoPop"
+    },
+    {
+        "skip": true,
+        "code": "FECF",
+        "name": "EraseNoPop"
+    },
+    {
+        "skip": true,
+        "code": "FED0",
+        "name": "WMemLdUI1"
+    },
+    {
+        "skip": true,
+        "code": "FED1",
+        "name": "WMemLdI2"
+    },
+    {
+        "skip": true,
+        "code": "FED2",
+        "name": "WMemLdStr"
+    },
+    {
+        "skip": true,
+        "code": "FED3",
+        "name": "WMemLdStr"
+    },
+    {
+        "skip": true,
+        "code": "FED4",
+        "name": "WMemLdCy"
+    },
+    {
+        "skip": true,
+        "code": "FED5",
+        "name": "WMemLdCy"
+    },
+    {
+        "skip": true,
+        "code": "FED6",
+        "name": "WMemLdRfVar"
+    },
+    {
+        "skip": true,
+        "code": "FED7",
+        "name": "WMemLdStr"
+    },
+    {
+        "skip": true,
+        "code": "FED8",
+        "name": "WMemLdStr"
+    },
+    {
+        "skip": true,
+        "code": "FED9",
+        "name": "WMemLdFPR4"
+    },
+    {
+        "skip": true,
+        "code": "FEDA",
+        "name": "WMemLdFPR8"
+    },
+    {
+        "skip": true,
+        "code": "FEDB",
+        "name": "IWMemLdPr"
+    },
+    {
+        "skip": true,
+        "code": "FEDC",
+        "name": "WMemLdRfVar"
+    },
+    {
+        "skip": true,
+        "code": "FEDD",
+        "name": "WMemLdVar"
+    },
+    {
+        "skip": true,
+        "code": "FEE0",
+        "name": "WMemStUI1"
+    },
+    {
+        "skip": true,
+        "code": "FEE1",
+        "name": "WMemStI2"
+    },
+    {
+        "skip": true,
+        "code": "FEE2",
+        "name": "WMemStR4"
+    },
+    {
+        "skip": true,
+        "code": "FEE3",
+        "name": "WMemStR4"
+    },
+    {
+        "skip": true,
+        "code": "FEE4",
+        "name": "WMemStR8"
+    },
+    {
+        "skip": true,
+        "code": "FEE5",
+        "name": "WMemStR8"
+    },
+    {
+        "skip": true,
+        "code": "FEE6",
+        "name": "WMemStVar"
+    },
+    {
+        "skip": true,
+        "code": "FEE7",
+        "name": "WMemStStr"
+    },
+    {
+        "skip": true,
+        "code": "FEE8",
+        "name": "WMemStAd"
+    },
+    {
+        "skip": true,
+        "code": "FEE9",
+        "name": "WMemStFPR4"
+    },
+    {
+        "skip": true,
+        "code": "FEEA",
+        "name": "WMemStFPR8"
+    },
+    {
+        "skip": true,
+        "code": "FEEB",
+        "name": "WMemStVarAd"
+    },
+    {
+        "skip": true,
+        "code": "FEEC",
+        "name": "WMemStVarAdFunc"
+    },
+    {
+        "skip": true,
+        "code": "FEED",
+        "name": "WMemStVarUnk"
+    },
+    {
+        "skip": true,
+        "code": "FEEE",
+        "name": "WMemStVarUnkFunc"
+    },
+    {
+        "skip": true,
+        "code": "FEEF",
+        "name": "WMemStAdFunc"
+    },
+    {
+        "skip": true,
+        "code": "FEF0",
+        "name": "WMemStVarCopy"
+    },
+    {
+        "skip": true,
+        "code": "FEF1",
+        "name": "WMemStStrCopy"
+    },
+    {
+        "skip": true,
+        "code": "FEF2",
+        "name": "VarIndexLdRfVarLock"
+    },
+    {
+        "skip": true,
+        "code": "FEF5",
+        "name": "AssignRecord"
+    },
+    {
+        "skip": true,
+        "code": "FEF6",
+        "name": "DestructAnsiOFrame"
+    },
+    {
+        "skip": true,
+        "code": "FEF7",
+        "name": "FStVarZero"
+    },
+    {
+        "skip": true,
+        "code": "FEF8",
+        "name": "Unknown102"
+    },
+    {
+        "skip": true,
+        "code": "FEF9",
+        "name": "VerifyVarObj"
+    },
+    {
+        "skip": true,
+        "code": "FEFA",
+        "name": "VerifyPVarObj"
+    },
+    {
+        "skip": true,
+        "code": "FEFB",
+        "name": "FnInStrB4"
+    },
+    {
+        "skip": true,
+        "code": "FEFC",
+        "name": "FnInStrB4Var"
+    },
+    {
+        "skip": true,
+        "code": "FEFD",
+        "name": "FnInStr4"
+    },
+    {
+        "skip": true,
+        "code": "FEFE",
+        "name": "FnInStr4Var"
+    },
+    {
+        "skip": true,
+        "code": "FEFF",
+        "name": "FnStrComp3"
+    },
+    {
+        "skip": true,
+        "code": "FF00",
+        "name": "FnStrComp3Var"
+    },
+    {
+        "skip": true,
+        "code": "FF01",
+        "name": "StAryMove"
+    },
+    {
+        "skip": true,
+        "code": "FF02",
+        "name": "StAryCopy"
+    },
+    {
+        "skip": true,
+        "code": "FF03",
+        "name": "StAryRecMove"
+    },
+    {
+        "skip": true,
+        "code": "FF04",
+        "name": "StAryRecCopy"
+    },
+    {
+        "skip": true,
+        "code": "FF06",
+        "name": "AryInRecLdPr"
+    },
+    {
+        "skip": true,
+        "code": "FF07",
+        "name": "AryInRecLdRf"
+    },
+    {
+        "skip": true,
+        "code": "FF08",
+        "name": "CExtInstUnk"
+    },
+    {
+        "skip": true,
+        "code": "FF09",
+        "name": "IStVarCopyObj"
+    },
+    {
+        "skip": true,
+        "code": "FF0A",
+        "name": "ArrayRebase1Var"
+    },
+    {
+        "skip": true,
+        "code": "FF0B",
+        "name": "Assert"
+    },
+    {
+        "skip": true,
+        "code": "FF0C",
+        "name": "RaiseEvent"
+    },
+    {
+        "skip": true,
+        "code": "FF0D",
+        "name": "PrintObject"
+    },
+    {
+        "skip": true,
+        "code": "FF0E",
+        "name": "PrintFile"
+    },
+    {
+        "skip": true,
+        "code": "FF0F",
+        "name": "WriteFile"
+    },
+    {
+        "skip": true,
+        "code": "FF10",
+        "name": "InputFile"
+    },
+    {
+        "skip": true,
+        "code": "FF12",
+        "name": "GetRecFxStr3"
+    },
+    {
+        "skip": true,
+        "code": "FF13",
+        "name": "GetRecFxStr4"
+    },
+    {
+        "skip": true,
+        "code": "FF14",
+        "name": "PutRecFxStr3"
+    },
+    {
+        "skip": true,
+        "code": "FF15",
+        "name": "PutRecFxStr4"
+    },
+    {
+        "skip": true,
+        "code": "FF16",
+        "name": "GetRecOwn3"
+    },
+    {
+        "skip": true,
+        "code": "FF17",
+        "name": "GetRecOwn4"
+    },
+    {
+        "skip": true,
+        "code": "FF18",
+        "name": "PutRecOwn3"
+    },
+    {
+        "skip": true,
+        "code": "FF19",
+        "name": "PutRecOwn4"
+    },
+    {
+        "skip": true,
+        "code": "FF1A",
+        "name": "LitI2_Byte"
+    },
+    {
+        "skip": true,
+        "code": "FF1B",
+        "name": "CBoolVarNull"
+    },
+    {
+        "skip": true,
+        "code": "FF1C",
+        "name": "LargeBos"
+    },
+    {
+        "skip": true,
+        "code": "FF1E",
+        "name": "ImpAdCallNonVirt"
+    },
+    {
+        "skip": true,
+        "code": "FF2A",
+        "name": "DestructRecord"
+    },
+    {
+        "skip": true,
+        "code": "FF2B",
+        "name": "Unknown103"
+    },
+    {
+        "skip": true,
+        "code": "FF2C",
+        "name": "Unknown104"
+    },
+    {
+        "skip": true,
+        "code": "FF2D",
+        "name": "ZeroRetVal"
+    },
+    {
+        "skip": true,
+        "code": "FF2E",
+        "name": "ZeroRetValVar"
+    },
+    {
+        "skip": true,
+        "code": "FF2F",
+        "name": "ExitProcCbHresult"
+    },
+    {
+        "skip": true,
+        "code": "FF30",
+        "name": "ExitProcFrameCbHresult"
+    },
+    {
+        "skip": true,
+        "code": "FF31",
+        "name": "EraseDestrKeepData"
+    },
+    {
+        "skip": true,
+        "code": "FF32",
+        "name": "CDargRefUdt"
+    },
+    {
+        "skip": true,
+        "code": "FF33",
+        "name": "CVarRefUdt"
+    },
+    {
+        "skip": true,
+        "code": "FF34",
+        "name": "CVarUdt"
+    },
+    {
+        "skip": true,
+        "code": "FF35",
+        "name": "StUdtVar"
+    },
+    {
+        "skip": true,
+        "code": "FF36",
+        "name": "StAryVar"
+    },
+    {
+        "skip": true,
+        "code": "FF37",
+        "name": "CopyBytesZero"
+    },
+    {
+        "skip": true,
+        "code": "FF38",
+        "name": "FLdZeroAry"
+    },
+    {
+        "skip": true,
+        "code": "FF39",
+        "name": "Unknown105"
+    },
+    {
+        "skip": true,
+        "code": "FF3A",
+        "name": "CVarAryUdt"
+    },
+    {
+        "skip": true,
+        "code": "FF3B",
+        "name": "RedimVarUdt"
+    },
+    {
+        "skip": true,
+        "code": "FF3C",
+        "name": "RedimPreserveVarUdt"
+    },
+    {
+        "skip": true,
+        "code": "FF3D",
+        "name": "VarLateMemLdRfVar"
+    },
+    {
+        "skip": true,
+        "code": "FF3E",
+        "name": "VarLateMemCallLdRfVar"
+    },
+    {
+        "skip": true,
+        "code": "FF41",
+        "name": "VarLateMemLdVar"
+    },
+    {
+        "skip": true,
+        "code": "FF42",
+        "name": "VarLateMemCallLdVar"
+    },
+    {
+        "skip": true,
+        "code": "FF43",
+        "name": "VarLateMemSt"
+    },
+    {
+        "skip": true,
+        "code": "FF44",
+        "name": "VarLateMemCallSt"
+    },
+    {
+        "skip": true,
+        "code": "FF45",
+        "name": "VarLateMemStAd"
+    }
+]

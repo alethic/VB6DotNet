@@ -1,0 +1,67 @@
+﻿<#@ template language="C#" hostspecific="true" #>
+<#@ output extension="partial.cs" #>
+<#@ assembly name="System.Core" #>
+<#@ assembly name="$(UserProfile)\.nuget\packages\Newtonsoft.Json\12.0.3\lib\net45\Newtonsoft.Json.dll" #>
+<#@ import namespace="System" #>
+<#@ import namespace="System.Collections" #>
+<#@ import namespace="System.Collections.Generic" #>
+<#@ import namespace="System.IO" #>
+<#@ import namespace="System.Linq" #>
+<#@ import namespace="System.Text" #>
+<#@ import namespace="Newtonsoft.Json" #>
+<#@ import namespace="Newtonsoft.Json.Linq" #>
+<#
+
+var f = Host.ResolvePath("Code.json");
+if (File.Exists(f) == false)
+    throw new InvalidOperationException();;
+
+// load rows
+var pcodes = JArray.Parse(File.ReadAllText(f))
+    .OfType<JObject>()
+    .ToArray();
+
+#>
+using System;
+
+namespace VB6DotNet.PCode
+{
+
+    /// <summary>
+    /// Specifics the numeric values of the various opcodes.
+    /// </summary>
+    public enum OpCode : ushort
+    {
+    
+        /// <summary>
+        /// Represents an unknown opcode. Potentially trailing procedure data.
+        /// </summary>
+        Invalid = 0xFFFF,
+
+<#
+foreach (var pcode in pcodes)
+{
+    if ((bool?)pcode["skip"] == true)
+        continue;
+
+    var name = (string)pcode["name"];
+    var code = (string)pcode["code"];
+    var desc = (string)pcode["desc"];
+
+    if (desc != null)
+    {
+#>
+        /// <summary>
+        /// <#= desc #>
+        /// </summary>
+<#
+    }
+#>
+        <#= name #> = 0x<#= code #>,
+
+<#
+}
+#>
+    }
+
+}

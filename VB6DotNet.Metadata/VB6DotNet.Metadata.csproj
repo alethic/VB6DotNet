@@ -1,0 +1,11 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VB6DotNet.PortableExecutable\VB6DotNet.PortableExecutable.csproj" />
+  </ItemGroup>
+
+</Project>

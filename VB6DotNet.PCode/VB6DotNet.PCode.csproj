@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
@@ -10,9 +10,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="PCodeOp.tt">
+    <None Update="OpCodeName.tt">
+      <LastGenOutput>OpCodeName.partial.cs</LastGenOutput>
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>PCodeOp.partial.cs</LastGenOutput>
+    </None>
+    <None Update="OpCode.tt">
+      <LastGenOutput>OpCode.partial.cs</LastGenOutput>
+      <Generator>TextTemplatingFileGenerator</Generator>
+    </None>
+    <None Update="OpDescriptor.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>OpDescriptor.partial.cs</LastGenOutput>
     </None>
   </ItemGroup>
 
@@ -21,10 +29,20 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="PCodeOp.partial.cs">
+    <Compile Update="OpCode.partial.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
-      <DependentUpon>PCodeOp.tt</DependentUpon>
+      <DependentUpon>OpCode.tt</DependentUpon>
+    </Compile>
+    <Compile Update="OpCodeName.partial.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>OpCodeName.tt</DependentUpon>
+    </Compile>
+    <Compile Update="OpDescriptor.partial.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>OpDescriptor.tt</DependentUpon>
     </Compile>
   </ItemGroup>
 
