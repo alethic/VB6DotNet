@@ -2,9 +2,9 @@
 {
 
     /// <summary>
-    /// Describes a property on a <see cref="Object"/>.
+    /// Describes a property on a <see cref="ObjectInfo"/>.
     /// </summary>
-    public class Property : Member
+    public class PropertyInfo : MemberInfo
     {
 
         /// <summary>
@@ -15,12 +15,12 @@
         /// <summary>
         /// Describes the getter of the property.
         /// </summary>
-        public Function Getter { get; set; }
+        public FunctionInfo Getter { get; set; }
 
         /// <summary>
         /// Describes the setter of the property.
         /// </summary>
-        public Sub Setter { get; set; }
+        public SubInfo Setter { get; set; }
 
     }
 

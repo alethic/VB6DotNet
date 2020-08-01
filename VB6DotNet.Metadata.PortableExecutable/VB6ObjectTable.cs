@@ -74,7 +74,7 @@ namespace VB6DotNet.Metadata.PortableExecutable
         /// <summary>
         /// GUID of the Object Table.
         /// </summary>
-        public Guid UuidObject => new Guid(Span[0x18..0x28]);
+        public Guid UuidObject => GuidExtensions.ToGuid(Span[0x18..0x28]);
 
         /// <summary>
         /// Internal flag used during compilation.

@@ -4,7 +4,7 @@
     /// <summary>
     /// Describes a VB6 subroutine.
     /// </summary>
-    public class Sub : Procedure
+    public class SubInfo : ProcedureInfo
     {
 
 

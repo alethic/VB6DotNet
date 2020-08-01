@@ -59,7 +59,7 @@ namespace VB6DotNet.Metadata.PortableExecutable
         /// <summary>
         /// CLSID of Project/TypeLib.
         /// </summary>
-        public Guid ProjectClsId => new Guid(Span[0x10..0x20]);
+        public Guid ProjectClsId => GuidExtensions.ToGuid(Span[0x10..0x20]);
 
         /// <summary>
         /// LCID of type library.

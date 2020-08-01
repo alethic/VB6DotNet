@@ -8,7 +8,7 @@ namespace VB6DotNet.Metadata
     /// <summary>
     /// Represents a VB6 form object.
     /// </summary>
-    public class Form : Object
+    public class FormInfo : ObjectInfo
     {
 
         /// <summary>
@@ -16,7 +16,7 @@ namespace VB6DotNet.Metadata
         /// </summary>
         /// <param name="form"></param>
         /// <returns></returns>
-        internal static Object Load(VB6Object form)
+        internal static ObjectInfo Load(VB6Object form)
         {
             throw new NotImplementedException();
         }

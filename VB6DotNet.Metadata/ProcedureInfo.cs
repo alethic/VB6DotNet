@@ -7,13 +7,13 @@ namespace VB6DotNet.Metadata
     /// <summary>
     /// Describes an invokable procedure.
     /// </summary>
-    public abstract class Procedure : Member
+    public abstract class ProcedureInfo : MemberInfo
     {
 
         /// <summary>
         /// Gets the set of parameters that can be passed to the procedure.
         /// </summary>
-        public IList<Parameter> Parameters { get; } = new List<Parameter>();
+        public IList<ParameterInfo> Parameters { get; } = new List<ParameterInfo>();
 
         /// <summary>
         /// Defines the P-Code stream procedure body.

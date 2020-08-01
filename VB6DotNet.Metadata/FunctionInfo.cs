@@ -4,7 +4,7 @@
     /// <summary>
     /// Describes a VB6 function.
     /// </summary>
-    public class Function : Procedure
+    public class FunctionInfo : ProcedureInfo
     {
 
         /// <summary>

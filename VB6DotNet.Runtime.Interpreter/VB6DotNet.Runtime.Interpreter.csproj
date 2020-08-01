@@ -5,6 +5,11 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Cogito.Core" Version="3.1.13" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VB6DotNet.Metadata\VB6DotNet.Metadata.csproj" />
     <ProjectReference Include="..\VB6DotNet.PCode\VB6DotNet.PCode.csproj" />
     <ProjectReference Include="..\VB6DotNet.Runtime\VB6DotNet.Runtime.csproj" />
   </ItemGroup>

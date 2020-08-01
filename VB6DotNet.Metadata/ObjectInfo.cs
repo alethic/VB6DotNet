@@ -9,7 +9,7 @@ namespace VB6DotNet.Metadata
     /// <summary>
     /// Describes the basic object type.
     /// </summary>
-    public abstract class Object
+    public abstract class ObjectInfo
     {
 
         /// <summary>
@@ -17,7 +17,7 @@ namespace VB6DotNet.Metadata
         /// </summary>
         /// <param name="src"></param>
         /// <param name="dst"></param>
-        internal static void Load(VB6Object src, Object dst)
+        internal static void Load(VB6Object src, ObjectInfo dst)
         {
             dst.Name = src.ObjectName;
 
@@ -37,7 +37,7 @@ namespace VB6DotNet.Metadata
         /// <summary>
         /// Gets the collection of members within this module.
         /// </summary>
-        public ICollection<Member> Members { get; set; } = new List<Member>();
+        public ICollection<MemberInfo> Members { get; set; } = new List<MemberInfo>();
 
     }
 

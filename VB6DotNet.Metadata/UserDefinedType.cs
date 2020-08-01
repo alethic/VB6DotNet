@@ -4,7 +4,7 @@
     /// <summary>
     /// Describes a user defined type.
     /// </summary>
-    public class UserDefinedType : Member
+    public class UserDefinedType : MemberInfo
     {
 
 

@@ -3,8 +3,8 @@ using System.Buffers.Binary;
 using System.Reflection.PortableExecutable;
 using System.Text;
 
-using VB6DotNet.Metadata.PortableExecutable.Extensions;
 using VB6DotNet.Metadata.PortableExecutable.Exports;
+using VB6DotNet.Metadata.PortableExecutable.Extensions;
 
 namespace VB6DotNet.Metadata.PortableExecutable
 {

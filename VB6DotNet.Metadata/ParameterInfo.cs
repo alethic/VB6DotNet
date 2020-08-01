@@ -4,7 +4,7 @@
     /// <summary>
     /// Describes a parameter on a procedure.
     /// </summary>
-    public class Parameter
+    public class ParameterInfo
     {
 
         /// <summary>

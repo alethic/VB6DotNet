@@ -9,7 +9,7 @@ namespace VB6DotNet.Metadata
     /// <summary>
     /// Describes a VB6 project.
     /// </summary>
-    public class Project
+    public class ProjectInfo
     {
 
         /// <summary>
@@ -17,7 +17,7 @@ namespace VB6DotNet.Metadata
         /// </summary>
         /// <param name="reader"></param>
         /// <returns></returns>
-        public static Project Load(PEReader reader)
+        public static ProjectInfo Load(PEReader reader)
         {
             return Load(reader.GetVB6MetadataReader());
         }
@@ -27,9 +27,9 @@ namespace VB6DotNet.Metadata
         /// </summary>
         /// <param name="reader"></param>
         /// <returns></returns>
-        public static Project Load(VB6MetadataReader reader)
+        public static ProjectInfo Load(VB6MetadataReader reader)
         {
-            var p = new Project();
+            var p = new ProjectInfo();
             if (reader.PortableExecutable.PEHeaders.IsExe)
                 p.Type = ProjectType.StandardExe;
             if (reader.PortableExecutable.PEHeaders.IsDll)
@@ -45,17 +45,17 @@ namespace VB6DotNet.Metadata
             foreach (var o in reader.ProjectInfo.ProjectInfo.ObjectTable.Objects)
                 if (o.ObjectType.HasFlag(VB6ObjectTypeFlags.HasOptionalInfo) &&
                     o.ObjectType.HasFlag(VB6ObjectTypeFlags.IsForm))
-                    p.Objects.Add(Form.Load(o));
+                    p.Objects.Add(FormInfo.Load(o));
 
             foreach (var o in reader.ProjectInfo.ProjectInfo.ObjectTable.Objects)
                 if (o.ObjectType.HasFlag(VB6ObjectTypeFlags.HasOptionalInfo) == false &&
                     o.ObjectType.HasFlag(VB6ObjectTypeFlags.IsForm) == false)
-                    p.Objects.Add(Module.Load(o));
+                    p.Objects.Add(ModuleInfo.Load(o));
 
             foreach (var o in reader.ProjectInfo.ProjectInfo.ObjectTable.Objects)
                 if (o.ObjectType.HasFlag(VB6ObjectTypeFlags.HasOptionalInfo) &&
                     o.ObjectType.HasFlag(VB6ObjectTypeFlags.IsForm) == false)
-                    p.Objects.Add(ClassModule.Load(o));
+                    p.Objects.Add(ClassInfo.Load(o));
 
             return p;
         }
@@ -83,7 +83,7 @@ namespace VB6DotNet.Metadata
         /// <summary>
         /// Gets or sets the startup object.
         /// </summary>
-        public Object StartupObject { get; set; }
+        public ObjectInfo StartupObject { get; set; }
 
         /// <summary>
         /// Gets or sets the threading model.
@@ -93,7 +93,7 @@ namespace VB6DotNet.Metadata
         /// <summary>
         /// Gets all of the objects within the project.
         /// </summary>
-        public ICollection<Object> Objects { get; set; } = new List<Object>();
+        public ICollection<ObjectInfo> Objects { get; set; } = new List<ObjectInfo>();
 
     }
 

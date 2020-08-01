@@ -62,7 +62,7 @@ namespace VB6DotNet.Metadata.PortableExecutable
         /// <summary>
         /// CLSID of object.
         /// </summary>
-        public Guid ObjectClsId => new Guid(Span[0x14..0x24]);
+        public Guid ObjectClsId => GuidExtensions.ToGuid(Span[0x14..0x24]);
 
         /// <summary>
         /// Specifies if the next CLSID is valid.
